@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - rayCastPointObj
+  - PsiBolt
+  - Background
+  - QuafSentry
+  - EnemyUnit
+  - TriggerArea
+  - EnemyManager
+  - EnemyBolt
+  - RaptorBetaBolt
+  - TelekineticErasure
+  - TelekineticSlash
+  - PlayerComponent
+  - BG
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Character
+  - Background
+  - Effect
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Parallax0
+    uniqueID: 2264832045
+    locked: 0
+  - name: Parallax1
+    uniqueID: 3329392051
+    locked: 0
+  - name: Parallax2
+    uniqueID: 317701549
+    locked: 0
+  - name: Parallax3
+    uniqueID: 2064123789
+    locked: 0
+  - name: Parallax4
+    uniqueID: 3941854743
+    locked: 0
+  - name: Parallax5
+    uniqueID: 3039762491
+    locked: 0
+  - name: Parallax5
+    uniqueID: 2761585093
+    locked: 0
+  - name: Parallax6
+    uniqueID: 3023316501
+    locked: 0
+  - name: Parallax7
+    uniqueID: 1030804363
+    locked: 0
+  - name: Parallax8
+    uniqueID: 48124701
+    locked: 0
+  - name: Character
+    uniqueID: 4259528119
+    locked: 0
+  - name: Effect1
+    uniqueID: 3041253911
+    locked: 0
+  - name: Effect2
+    uniqueID: 1201713281
+    locked: 0
