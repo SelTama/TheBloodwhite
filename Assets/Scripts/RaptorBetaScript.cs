@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,6 +37,7 @@ public class RaptorBetaScript : MonoBehaviour
 
     void Update()
     {
+        //OnTidaEnraged += Scream_OnTidaEnraged;
         FlankingManeuvres();
     }
 
@@ -69,6 +71,13 @@ public class RaptorBetaScript : MonoBehaviour
 
         }
     }
+
+    //private void Scream_OnTidaEnraged(object sender, EventArgs e) {
+    //    Debug.Log("Space!");
+    
+    //}
+
+
 
 
 

@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class TidaStateScript : MonoBehaviour
 {
 
+
+    //public event EventHandler OnTidaEnraged;
+
+
     public ArmourModel[] armourObjList;
 
     //TIDA MENTAL STATUS
@@ -75,6 +79,7 @@ public class TidaStateScript : MonoBehaviour
         if (tidaFury >= tidaFuryLimit)
         {
             tidaIsEnraged = true;
+            //OnTidaEnraged?.Invoke(this, EventArgs.Empty);
             StartCoroutine(TidaEnraged());
             GetComponent<ScreenEffectsScript>().tidaEnraged = true;
             Debug.Log("OH F TIDA IS BUCHIGIRE");
@@ -100,6 +105,8 @@ public class TidaStateScript : MonoBehaviour
         PlayerController.TEOnCooldown += TEIsOnCooldown;
         //PlayerController.TSOnCooldown += TSIsOnCooldown;
     }
+
+
 
     IEnumerator TelekineticErasureCooldown()
     {

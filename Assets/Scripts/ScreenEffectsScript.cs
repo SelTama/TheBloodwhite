@@ -9,6 +9,8 @@ using UnityEngine.Rendering.Universal;
 public class ScreenEffectsScript : MonoBehaviour
 {
 
+
+
     public Renderer2DData screenEffectsRenderer;
     public Material screenMat;
     public bool tidaEnraged;
@@ -16,6 +18,7 @@ public class ScreenEffectsScript : MonoBehaviour
     public float rippleEffectSpeed;
     public float rippleEffectSize;
     public float rippleEffectMagnitude;
+
 
 
     void Update()
@@ -43,6 +46,7 @@ public class ScreenEffectsScript : MonoBehaviour
         screenMat.SetFloat("_EffectSpeed", rippleEffectSpeed);
         screenMat.SetFloat("_EffectSize", rippleEffectSize);
         screenMat.SetFloat("_EffectMagnitude", rippleEffectMagnitude);
+        //rippleEffectMagnitude = Mathf.Lerp(rippleEffectMagnitude, 0f, 0.01f);
 
         yield return new WaitForSeconds(1f);
 

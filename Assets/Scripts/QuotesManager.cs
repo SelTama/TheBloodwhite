@@ -18,11 +18,6 @@ public class QuotesManager : MonoBehaviour
         QuotesList[CollisionNPC].FButton.SetActive(false);
     }
     
-    void Start()
-    {
-        
-    }
-    
     void Update()
     {           
                
