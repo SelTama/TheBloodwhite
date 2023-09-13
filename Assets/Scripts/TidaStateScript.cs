@@ -8,7 +8,7 @@ public class TidaStateScript : MonoBehaviour
 {
 
 
-    //public event EventHandler OnTidaEnraged;
+    public event EventHandler OnTidaEnraged;
 
 
     public ArmourModel[] armourObjList;
@@ -79,7 +79,6 @@ public class TidaStateScript : MonoBehaviour
         if (tidaFury >= tidaFuryLimit)
         {
             tidaIsEnraged = true;
-            //OnTidaEnraged?.Invoke(this, EventArgs.Empty);
             StartCoroutine(TidaEnraged());
             GetComponent<ScreenEffectsScript>().tidaEnraged = true;
             Debug.Log("OH F TIDA IS BUCHIGIRE");
@@ -124,6 +123,7 @@ public class TidaStateScript : MonoBehaviour
 
     IEnumerator TidaEnraged() 
     {
+        OnTidaEnraged?.Invoke(this, EventArgs.Empty);
 
         foreach (ArmourModel armour in armourObjList)
         {
