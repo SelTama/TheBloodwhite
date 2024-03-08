@@ -10,7 +10,6 @@ public class ScreenEffectsScript : MonoBehaviour
 {
     public Renderer2DData screenEffectsRenderer;
     public Material screenMat;
-    public bool tidaEnraged;
 
     public float rippleEffectSpeed;
     public float rippleEffectSize;
@@ -37,11 +36,10 @@ public class ScreenEffectsScript : MonoBehaviour
         screenMat.SetFloat("_EffectSpeed", rippleEffectSpeed);
         screenMat.SetFloat("_EffectSize", rippleEffectSize);
         screenMat.SetFloat("_EffectMagnitude", rippleEffectMagnitude);
-        //rippleEffectMagnitude = Mathf.Lerp(rippleEffectMagnitude, 0f, 0.001f);
 
         yield return new WaitForSeconds(1f);
 
-        tidaEnraged = false;
+        rippleEffectMagnitude = Mathf.Lerp(rippleEffectMagnitude, 0f, 0.001f);
         screenMat.SetFloat("_EffectSpeed", 0);
         screenMat.SetFloat("_EffectSize", 0);
         screenMat.SetFloat("_EffectMagnitude", 0);

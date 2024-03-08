@@ -80,7 +80,6 @@ public class TidaStateScript : MonoBehaviour
         {
             tidaIsEnraged = true;
             StartCoroutine(TidaEnraged());
-            GetComponent<ScreenEffectsScript>().tidaEnraged = true;
             Debug.Log("OH F TIDA IS BUCHIGIRE");
         }
         else

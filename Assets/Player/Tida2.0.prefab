@@ -2268,7 +2268,6 @@ MonoBehaviour:
   screenEffectsRenderer: {fileID: 11400000, guid: 728d6a3c7f4cce045bca48b5d829805d,
     type: 2}
   screenMat: {fileID: 2100000, guid: d3c2861f48070ea48aacf847f6d3be3b, type: 2}
-  tidaEnraged: 0
   rippleEffectSpeed: 1.3
   rippleEffectSize: 0.08
   rippleEffectMagnitude: -0.2

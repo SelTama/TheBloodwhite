@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CameraManager : MonoBehaviour
-{    
+{
     public GameObject playerObj;
     public float rightLimit;
     public float leftLimit;
@@ -9,7 +10,7 @@ public class CameraManager : MonoBehaviour
     public float downLimit;
 
     void Awake()
-    {        
+    {
         playerObj = GameObject.FindWithTag("Player");
     }
 
@@ -21,7 +22,7 @@ public class CameraManager : MonoBehaviour
 
 
     private void LateUpdate()
-    {        
+    {
         CameraFollowCruiseMode();
     }
 
@@ -36,7 +37,8 @@ public class CameraManager : MonoBehaviour
 
 
     private void CameraFollowCruiseMode()
-    {       
+    {
+        Camera.main.nearClipPlane = MathF.Abs(transform.position.z) - 0.1f;
 
         //move right
         if (playerObj.transform.position.x >= rightLimit - .5f)
