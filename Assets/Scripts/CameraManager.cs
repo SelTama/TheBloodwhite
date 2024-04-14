@@ -8,7 +8,8 @@ public class CameraManager : MonoBehaviour
     public float leftLimit;
     public float upLimit;
     public float downLimit;
-
+    public float cameraDistance = 70f;
+     
     void Awake()
     {
         playerObj = GameObject.FindWithTag("Player");
@@ -33,11 +34,14 @@ public class CameraManager : MonoBehaviour
         rightLimit = camObj.ViewportToWorldPoint(new Vector3(.4f, 0, Camera.main.nearClipPlane)).x;
         upLimit = camObj.ViewportToWorldPoint(new Vector3(0, .9f, Camera.main.nearClipPlane)).y;
         downLimit = camObj.ViewportToWorldPoint(new Vector3(0, .1f, Camera.main.nearClipPlane)).y;
+
     }
 
 
     private void CameraFollowCruiseMode()
     {
+
+        //Camera.main.transform.position = playerObj.transform.position - new Vector3(0, 0, cameraDistance);
         Camera.main.nearClipPlane = MathF.Abs(transform.position.z) - 0.1f;
 
         //move right
