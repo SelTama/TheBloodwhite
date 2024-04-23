@@ -63,53 +63,84 @@ public class PlayerController : MonoBehaviour
 
     private void Movements()
     {
-        animator.SetFloat("X", animatorSpeedX);
-        animator.SetFloat("Y", animatorSpeedY);
+        animator.SetFloat("MovementSpeedX", animatorSpeedX);
+        animator.SetFloat("MovementSpeedY", animatorSpeedY);
 
         if (Input.GetKey(KeyCode.D))
-        {
+        {         
+            if (transform.position.x <= stageDimensions.x)
+            {               
+                transform.position += Vector3.right * tidaSpeed * Time.deltaTime;
+            }
+            //ANIMATIONS
             animatorSpeedX = Mathf.Clamp(animatorSpeedX += movementSpeedX * Time.deltaTime, -1, 1);
 
-            if (transform.position.x <= stageDimensions.x)
+            if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
             {
-               
-                transform.position += Vector3.right * tidaSpeed * Time.deltaTime;
-
+                animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, 0, 1);
+            }
+            if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
+            {
+                animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 0);
             }
         }
 
         if (Input.GetKey(KeyCode.A))
-        {
-            animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, -1, 1);
-
+        {            
             if (transform.position.x >= stageDimensions.w)
             {
                 transform.position += Vector3.left * tidaSpeed * Time.deltaTime;
             }
-        }
-       
-        if (Input.GetKey(KeyCode.W))
-        {
-            animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 1);
+            //ANIMATIONS
+            animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, -1, 1);
 
+            if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
+            {
+                animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, 0, 1);
+            }
+            if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
+            {
+                animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 0);
+            }
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {           
             if (transform.position.y <= stageDimensions.y)
             {
                 
                 transform.position += Vector3.up * tidaSpeed * Time.deltaTime;
             }
-           
+            //ANIMATIONS
+            animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 1);
+
+            if (!Input.GetKey(KeyCode.D) && animatorSpeedX >= 0)
+            {
+                animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, 0, 1);
+            }
+            if (!Input.GetKey(KeyCode.A) && animatorSpeedX <= 0)
+            {
+                animatorSpeedX = Mathf.Clamp(animatorSpeedX += movementSpeedX * Time.deltaTime, -1, 0);
+            }
         }
 
         if (Input.GetKey(KeyCode.S))
-        {
-            animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, -1, 1);
-
+        {         
             if (transform.position.y >= stageDimensions.z)
-            {
-                
+            {                
                 transform.position += Vector3.down * tidaSpeed * Time.deltaTime;
             }
-            
+            //ANIMATIONS
+            animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, -1, 1);
+
+            if (!Input.GetKey(KeyCode.D) && animatorSpeedX >= 0)
+            {
+                animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, 0, 1);
+            }
+            if (!Input.GetKey(KeyCode.A) && animatorSpeedX <= 0)
+            {
+                animatorSpeedX = Mathf.Clamp(animatorSpeedX += movementSpeedX * Time.deltaTime, -1, 0);
+            }
         }
 
         else
