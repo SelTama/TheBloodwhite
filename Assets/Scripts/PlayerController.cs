@@ -28,6 +28,11 @@ public class PlayerController : MonoBehaviour
     private Vector3 reticule;
     public Vector4 stageDimensions;
 
+    private float movementSpeedX = 6f;
+    private float movementSpeedY = 6f;
+    public float animatorSpeedX;
+    public float animatorSpeedY;
+
     public List<PsiBolterModel> PsiBolterBatteryList = new List<PsiBolterModel>();
     public AudioClip[] psionicEchoes;
 
@@ -58,28 +63,38 @@ public class PlayerController : MonoBehaviour
 
     private void Movements()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (transform.position.x >= stageDimensions.w)
-            {
-                transform.position += Vector3.left * tidaSpeed * Time.deltaTime;
-            }
-        }
+        animator.SetFloat("X", animatorSpeedX);
+        animator.SetFloat("Y", animatorSpeedY);
 
         if (Input.GetKey(KeyCode.D))
         {
+            animatorSpeedX = Mathf.Clamp(animatorSpeedX += movementSpeedX * Time.deltaTime, -1, 1);
+
             if (transform.position.x <= stageDimensions.x)
             {
+               
                 transform.position += Vector3.right * tidaSpeed * Time.deltaTime;
 
             }
         }
 
+        if (Input.GetKey(KeyCode.A))
+        {
+            animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, -1, 1);
+
+            if (transform.position.x >= stageDimensions.w)
+            {
+                transform.position += Vector3.left * tidaSpeed * Time.deltaTime;
+            }
+        }
+       
         if (Input.GetKey(KeyCode.W))
         {
+            animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 1);
 
             if (transform.position.y <= stageDimensions.y)
             {
+                
                 transform.position += Vector3.up * tidaSpeed * Time.deltaTime;
             }
            
@@ -87,8 +102,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
+            animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, -1, 1);
+
             if (transform.position.y >= stageDimensions.z)
             {
+                
                 transform.position += Vector3.down * tidaSpeed * Time.deltaTime;
             }
             
@@ -100,130 +118,130 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            if (Input.GetKey(KeyCode.S))
-                animator.SetInteger("activeAnimation", 6);
-            else if (Input.GetKey(KeyCode.D))
-                animator.SetInteger("activeAnimation", 0);
-            else if (Input.GetKey(KeyCode.W))
-                animator.SetInteger("activeAnimation", 1);
-            else if (Input.GetKey(KeyCode.Mouse1))
-            {
-                if (comboCount >= 1)
-                {
-                    animator.SetInteger("activeAnimation", 10);
-                }
-            }
-            else if (Input.GetKey(KeyCode.E))
-            {
-                if (TEIsGo)
-                {
-                    animator.SetInteger("activeAnimation", 9);
-                }
-            }
-            else
-                animator.SetInteger("activeAnimation", 4);
-        }
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    if (Input.GetKey(KeyCode.S))
+        //        animator.SetInteger("activeAnimation", 6);
+        //    else if (Input.GetKey(KeyCode.D))
+        //        animator.SetInteger("activeAnimation", 0);
+        //    else if (Input.GetKey(KeyCode.W))
+        //        animator.SetInteger("activeAnimation", 1);
+        //    else if (Input.GetKey(KeyCode.Mouse1))
+        //    {
+        //        if (comboCount >= 1)
+        //        {
+        //            animator.SetInteger("activeAnimation", 10);
+        //        }
+        //    }
+        //    else if (Input.GetKey(KeyCode.E))
+        //    {
+        //        if (TEIsGo)
+        //        {
+        //            animator.SetInteger("activeAnimation", 9);
+        //        }
+        //    }
+        //    else
+        //        animator.SetInteger("activeAnimation", 4);
+        //}
 
-        else if (Input.GetKey(KeyCode.D))
-        {
-            if (Input.GetKey(KeyCode.S))
-                animator.SetInteger("activeAnimation", 8);
-            else if (Input.GetKey(KeyCode.A))
-                animator.SetInteger("activeAnimation", 0);
-            else if (Input.GetKey(KeyCode.W))
-                animator.SetInteger("activeAnimation", 3);
-            else if (Input.GetKey(KeyCode.Mouse1))
-            {
-                if (comboCount >= 1)
-                {
-                    animator.SetInteger("activeAnimation", 10);
-                }
-            }
-            else if (Input.GetKey(KeyCode.E))
-            {
-                if (TEIsGo)
-                {
-                    animator.SetInteger("activeAnimation", 9);
-                }
-            }
-            else
-                animator.SetInteger("activeAnimation", 5);
-        }
+        //else if (Input.GetKey(KeyCode.D))
+        //{
+        //    if (Input.GetKey(KeyCode.S))
+        //        animator.SetInteger("activeAnimation", 8);
+        //    else if (Input.GetKey(KeyCode.A))
+        //        animator.SetInteger("activeAnimation", 0);
+        //    else if (Input.GetKey(KeyCode.W))
+        //        animator.SetInteger("activeAnimation", 3);
+        //    else if (Input.GetKey(KeyCode.Mouse1))
+        //    {
+        //        if (comboCount >= 1)
+        //        {
+        //            animator.SetInteger("activeAnimation", 10);
+        //        }
+        //    }
+        //    else if (Input.GetKey(KeyCode.E))
+        //    {
+        //        if (TEIsGo)
+        //        {
+        //            animator.SetInteger("activeAnimation", 9);
+        //        }
+        //    }
+        //    else
+        //        animator.SetInteger("activeAnimation", 5);
+        //}
 
-        else if (Input.GetKey(KeyCode.W))
-        {
-            if (Input.GetKey(KeyCode.S))
-                animator.SetInteger("activeAnimation", 0);
-            else if (Input.GetKey(KeyCode.D))
-                animator.SetInteger("activeAnimation", 3);
-            else if (Input.GetKey(KeyCode.A))
-                animator.SetInteger("activeAnimation", 1);
-            else if (Input.GetKey(KeyCode.Mouse1))
-            {
-                if (comboCount >= 1)
-                {
-                    animator.SetInteger("activeAnimation", 10);
-                }
-            }
-            else if (Input.GetKey(KeyCode.E))
-            {
-                if (TEIsGo)
-                {
-                    animator.SetInteger("activeAnimation", 9);
-                }
-            }
-            else
-                animator.SetInteger("activeAnimation", 2);
-        }
+        //else if (Input.GetKey(KeyCode.W))
+        //{
+        //    if (Input.GetKey(KeyCode.S))
+        //        animator.SetInteger("activeAnimation", 0);
+        //    else if (Input.GetKey(KeyCode.D))
+        //        animator.SetInteger("activeAnimation", 3);
+        //    else if (Input.GetKey(KeyCode.A))
+        //        animator.SetInteger("activeAnimation", 1);
+        //    else if (Input.GetKey(KeyCode.Mouse1))
+        //    {
+        //        if (comboCount >= 1)
+        //        {
+        //            animator.SetInteger("activeAnimation", 10);
+        //        }
+        //    }
+        //    else if (Input.GetKey(KeyCode.E))
+        //    {
+        //        if (TEIsGo)
+        //        {
+        //            animator.SetInteger("activeAnimation", 9);
+        //        }
+        //    }
+        //    else
+        //        animator.SetInteger("activeAnimation", 2);
+        //}
 
-        else if (Input.GetKey(KeyCode.S))
-        {
-            if (Input.GetKey(KeyCode.A))
-                animator.SetInteger("activeAnimation", 6);
-            else if (Input.GetKey(KeyCode.D))
-                animator.SetInteger("activeAnimation", 8);
-            else if (Input.GetKey(KeyCode.W))
-                animator.SetInteger("activeAnimation", 0);
-            else if (Input.GetKey(KeyCode.Mouse1))
-            {
-                if (comboCount >= 1)
-                {
-                    animator.SetInteger("activeAnimation", 10);
-                }
-            }
-            else if (Input.GetKey(KeyCode.E))
-            {
-                if (TEIsGo)
-                {
-                    animator.SetInteger("activeAnimation", 9);
-                }
-            }
-            else
-                animator.SetInteger("activeAnimation", 7);
-        }
+        //else if (Input.GetKey(KeyCode.S))
+        //{
+        //    if (Input.GetKey(KeyCode.A))
+        //        animator.SetInteger("activeAnimation", 6);
+        //    else if (Input.GetKey(KeyCode.D))
+        //        animator.SetInteger("activeAnimation", 8);
+        //    else if (Input.GetKey(KeyCode.W))
+        //        animator.SetInteger("activeAnimation", 0);
+        //    else if (Input.GetKey(KeyCode.Mouse1))
+        //    {
+        //        if (comboCount >= 1)
+        //        {
+        //            animator.SetInteger("activeAnimation", 10);
+        //        }
+        //    }
+        //    else if (Input.GetKey(KeyCode.E))
+        //    {
+        //        if (TEIsGo)
+        //        {
+        //            animator.SetInteger("activeAnimation", 9);
+        //        }
+        //    }
+        //    else
+        //        animator.SetInteger("activeAnimation", 7);
+        //}
 
-        else if (Input.GetKey(KeyCode.Mouse1))
-        {
-            if (comboCount >= 1)
-            {
-                animator.SetInteger("activeAnimation", 10);
-            }
-        }
+        //else if (Input.GetKey(KeyCode.Mouse1))
+        //{
+        //    if (comboCount >= 1)
+        //    {
+        //        animator.SetInteger("activeAnimation", 10);
+        //    }
+        //}
 
-        else if (Input.GetKey(KeyCode.E))
-        {
-            if (TEIsGo)
-            {
-                animator.SetInteger("activeAnimation", 9);
-            }
-        }
+        //else if (Input.GetKey(KeyCode.E))
+        //{
+        //    if (TEIsGo)
+        //    {
+        //        animator.SetInteger("activeAnimation", 9);
+        //    }
+        //}
 
-        else
-        {
-            animator.SetInteger("activeAnimation", 0);
-        }
+        //else
+        //{
+        //    animator.SetInteger("activeAnimation", 0);
+        //}
     }
 
     private void PsiBatteryFire()

@@ -2347,6 +2347,8 @@ MonoBehaviour:
   bolt: {fileID: 2925168098974774840, guid: 50a306b496706aa4db85e21e33355a57, type: 3}
   batterySequence: 0
   stageDimensions: {x: 0, y: 0, z: 0, w: 0}
+  animatorSpeedX: 0
+  animatorSpeedY: 0
   PsiBolterBatteryList:
   - Battery: {fileID: 6119415076958580366}
   - Battery: {fileID: 6119415077185692674}
