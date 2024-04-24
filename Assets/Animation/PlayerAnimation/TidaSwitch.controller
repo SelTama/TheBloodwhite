@@ -790,19 +790,13 @@ AnimatorController:
   m_Name: TidaSwitch
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: activeAnimation
-    m_Type: 3
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: MovementSpeedX
+  - m_Name: X
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: MovementSpeedY
+  - m_Name: Y
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1506,8 +1500,8 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: MovementSpeedX
-  m_BlendParameterY: MovementSpeedY
+  m_BlendParameter: X
+  m_BlendParameterY: Y
   m_MinThreshold: 0.125
   m_MaxThreshold: 1
   m_UseAutomaticThresholds: 1

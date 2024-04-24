@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 
 
@@ -63,8 +65,8 @@ public class PlayerController : MonoBehaviour
 
     private void Movements()
     {
-        animator.SetFloat("MovementSpeedX", animatorSpeedX);
-        animator.SetFloat("MovementSpeedY", animatorSpeedY);
+        animator.SetFloat("X", animatorSpeedX);
+        animator.SetFloat("Y", animatorSpeedY);
 
         if (Input.GetKey(KeyCode.D))
         {         
@@ -73,17 +75,18 @@ public class PlayerController : MonoBehaviour
                 transform.position += Vector3.right * tidaSpeed * Time.deltaTime;
             }
             //ANIMATIONS
-            animatorSpeedX = Mathf.Clamp(animatorSpeedX += movementSpeedX * Time.deltaTime, -1, 1);
+            animatorSpeedX = Mathf.Clamp( Mathf.SmoothDamp(animatorSpeedX,1,ref movementSpeedX,.2f), -1, 1);
 
             if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
             {
-                animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, 0, 1);
+                animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
             }
             if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
             {
-                animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 0);
+                animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
             }
         }
+
 
         if (Input.GetKey(KeyCode.A))
         {            
@@ -92,15 +95,15 @@ public class PlayerController : MonoBehaviour
                 transform.position += Vector3.left * tidaSpeed * Time.deltaTime;
             }
             //ANIMATIONS
-            animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, -1, 1);
+            animatorSpeedX = Mathf.Clamp( Mathf.SmoothDamp(animatorSpeedX, -1, ref movementSpeedX, .2f), -1, 1);
 
             if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
             {
-                animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, 0, 1);
+                animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
             }
             if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
             {
-                animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 0);
+                animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
             }
         }
 
@@ -112,15 +115,15 @@ public class PlayerController : MonoBehaviour
                 transform.position += Vector3.up * tidaSpeed * Time.deltaTime;
             }
             //ANIMATIONS
-            animatorSpeedY = Mathf.Clamp(animatorSpeedY += movementSpeedY * Time.deltaTime, -1, 1);
+            animatorSpeedY = Mathf.Clamp( Mathf.SmoothDamp(animatorSpeedY, 1, ref movementSpeedY, .2f), -1, 1);
 
             if (!Input.GetKey(KeyCode.D) && animatorSpeedX >= 0)
             {
-                animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, 0, 1);
+                animatorSpeedX = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedX, 0, ref movementSpeedX, .4f), -1, 1);
             }
             if (!Input.GetKey(KeyCode.A) && animatorSpeedX <= 0)
             {
-                animatorSpeedX = Mathf.Clamp(animatorSpeedX += movementSpeedX * Time.deltaTime, -1, 0);
+                animatorSpeedX = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedX, 0, ref movementSpeedX, .4f), -1, 1); 
             }
         }
 
@@ -131,15 +134,15 @@ public class PlayerController : MonoBehaviour
                 transform.position += Vector3.down * tidaSpeed * Time.deltaTime;
             }
             //ANIMATIONS
-            animatorSpeedY = Mathf.Clamp(animatorSpeedY -= movementSpeedY * Time.deltaTime, -1, 1);
+            animatorSpeedY = Mathf.Clamp( Mathf.SmoothDamp(animatorSpeedY, -1, ref movementSpeedY, .2f), -1, 1);
 
             if (!Input.GetKey(KeyCode.D) && animatorSpeedX >= 0)
             {
-                animatorSpeedX = Mathf.Clamp(animatorSpeedX -= movementSpeedX * Time.deltaTime, 0, 1);
+                animatorSpeedX = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedX, 0, ref movementSpeedX, .4f), -1, 1);
             }
             if (!Input.GetKey(KeyCode.A) && animatorSpeedX <= 0)
             {
-                animatorSpeedX = Mathf.Clamp(animatorSpeedX += movementSpeedX * Time.deltaTime, -1, 0);
+                animatorSpeedX = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedX, 0, ref movementSpeedX, .4f), -1, 1);
             }
         }
 
@@ -295,7 +298,7 @@ public class PlayerController : MonoBehaviour
                 Physics2D.IgnoreCollision(GetComponent<Rigidbody2D>().GetComponent<CapsuleCollider2D>(), psionicBolt.GetComponent<Collider2D>());
                 //check "is trigger" if the collision happens on other atk items
 
-                AudioClip clip = psionicEchoes[Random.Range(0, psionicEchoes.Length)];
+                AudioClip clip = psionicEchoes[UnityEngine.Random.Range(0, psionicEchoes.Length)];
                 GetComponent<AudioSource>().PlayOneShot(clip);
 
 
