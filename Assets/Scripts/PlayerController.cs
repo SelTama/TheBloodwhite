@@ -148,6 +148,8 @@ public class PlayerController : MonoBehaviour
 
         else
         {
+            animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .6f), -1, 1);
+            animatorSpeedX = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedX, 0, ref movementSpeedX, .6f), -1, 1);
             transform.position = transform.position;
         }
 

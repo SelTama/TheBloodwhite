@@ -31,7 +31,7 @@ public class ScreenEffectsScript : MonoBehaviour
 
         Camera camObj = Camera.main;
 
-        screenMat.SetFloat("_TimePassed", -float.MaxValue);
+        screenMat.SetFloat("_TimePassed", 0f);
         screenMat.SetVector("_FocalPoint", camObj.WorldToViewportPoint(new Vector2(transform.position.x, transform.position.y)));
         screenMat.SetFloat("_EffectSpeed", rippleEffectSpeed);
         screenMat.SetFloat("_EffectSize", rippleEffectSize);

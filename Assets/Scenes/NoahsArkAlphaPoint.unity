@@ -21951,6 +21951,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tida2.0
       objectReference: {fileID: 0}
+    - target: {fileID: 7590236214400591679, guid: 6c429358b8479954eb033a71b6100d18,
+        type: 3}
+      propertyPath: rippleEffectMagnitude
+      value: -0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

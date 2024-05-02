@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3e736de5779fe184e94145c6b495110c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1c6911580461efe44bb9f0f242a44f9a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
@@ -72,8 +72,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _MaskStrength: 1.46
-    - _WaveScale: 1
+    - _MaskStrength: 1.3
+    - _WaveScale: 0.5
     - _WaveStrength: 0.51
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
