@@ -18,13 +18,16 @@ public class BackgroundMovement : MonoBehaviour
 
     void Update()
     {
-
-        foreach (BackgroundObjModel bgm in backgroundObjList)
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
         {
-            offset = transitionPos.x / bgm.distance + 0.1f * Time.deltaTime;
-            bgm.Obj.transform.position = new Vector3(offset * -playerObj.transform.localPosition.x, offset * -playerObj.transform.localPosition.y, bgm.Obj.transform.localPosition.z);     
+            foreach (BackgroundObjModel bgm in backgroundObjList)
+            {
+                offset = transitionPos.x / bgm.distance + 0.1f * Time.deltaTime;
+                bgm.Obj.transform.position = new Vector3(offset * -playerObj.transform.localPosition.x, offset * -playerObj.transform.localPosition.y, bgm.Obj.transform.localPosition.z);
 
+            }
         }
+       
     }
 
     [System.Serializable]

@@ -46,9 +46,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _NoiseScale: 0
+    - _NoiseScale: 15
     m_Colors:
-    - _Color: {r: 675.5881, g: 0, b: 0, a: 1}
+    - _Color: {r: 901.96277, g: 0, b: 0, a: 1}
     - _WaveSpeed: {r: 5, g: 5, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3566517760659559207

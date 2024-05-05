@@ -2408,7 +2408,6 @@ MonoBehaviour:
   tidaIsInCombat: 0
   tidaIsEnraged: 0
   activeTrigger: {fileID: 0}
-  enragedAnim: {fileID: 6119415077603365811}
   combatModeMusic: {fileID: 8300000, guid: be885bf01ae114f468f42d93ee6bd31b, type: 3}
   cruiseModeMusic: {fileID: 8300000, guid: e37771e88bae51b43841311776adbf6d, type: 3}
 --- !u!114 &7590236214400591679

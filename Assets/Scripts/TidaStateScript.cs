@@ -28,7 +28,7 @@ public class TidaStateScript : MonoBehaviour
     //TRIGGERED EVENTS
 
     public GameObject activeTrigger;
-    public GameObject enragedAnim;
+    //public GameObject enragedAnim;
     public AudioClip combatModeMusic;
     public AudioClip cruiseModeMusic;
 
@@ -133,12 +133,12 @@ public class TidaStateScript : MonoBehaviour
             //armour.skin.GetComponent<SpriteRenderer>().material.SetColor("1EnergyColour", Color.red);
             //armour.skin.GetComponent<SpriteRenderer>().material = armour.armourMaterialEnraged;
         }
-        enragedAnim.gameObject.SetActive(true);
+        //enragedAnim.gameObject.SetActive(true);
 
 
 
         yield return new WaitForSeconds(tidaEnrageDuration);
-        enragedAnim.gameObject.SetActive(false);
+        //enragedAnim.gameObject.SetActive(false);
         tidaFury = 0;
 
         yield return
