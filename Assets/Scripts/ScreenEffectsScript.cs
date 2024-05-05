@@ -39,7 +39,7 @@ public class ScreenEffectsScript : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        rippleEffectMagnitude = Mathf.SmoothDamp(rippleEffectMagnitude, 0, ref rippleEffectSpeed, .6f);
+        rippleEffectMagnitude = Mathf.SmoothDamp(rippleEffectMagnitude, 0, ref rippleEffectSpeed, .1f);
         screenMat.SetFloat("_EffectSpeed", 0);
         screenMat.SetFloat("_EffectSize", 0);
         screenMat.SetFloat("_EffectMagnitude", 0);
