@@ -44,7 +44,7 @@ Material:
     - _TimePassed: 0
     m_Colors:
     - _BottomSlashOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _FocalPoint: {r: 0.26543355, g: 0.5, b: 70, a: 0}
+    - _FocalPoint: {r: 0.091766804, g: 0.34340435, b: 70, a: 0}
     - _Side1: {r: -0.38, g: 0.02, b: 0, a: 0}
     - _Side2: {r: -0.21, g: 0, b: 0, a: 0}
     - _TopSlashOffset: {r: 0, g: 0, b: 0, a: 0}

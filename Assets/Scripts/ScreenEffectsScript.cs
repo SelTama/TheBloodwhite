@@ -44,6 +44,7 @@ public class ScreenEffectsScript : MonoBehaviour
         screenMat.SetFloat("_EffectSize", 0);
         screenMat.SetFloat("_EffectMagnitude", 0);
 
+
     }
 
 
