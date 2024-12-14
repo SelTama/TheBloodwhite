@@ -58,9 +58,9 @@ public class PlayerController : MonoBehaviour
     {
         Movements();
         TelekineticSlash();
-        TelekineticErasure();
         PsionicBolt();
         SetBGM();
+        TelekineticErasure();
     }
 
     private void Movements()
@@ -146,6 +146,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+       
+
         else
         {
             animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .6f), -1, 1);
@@ -153,131 +155,6 @@ public class PlayerController : MonoBehaviour
             transform.position = transform.position;
         }
 
-
-        //if (Input.GetKey(KeyCode.A))
-        //{
-        //    if (Input.GetKey(KeyCode.S))
-        //        animator.SetInteger("activeAnimation", 6);
-        //    else if (Input.GetKey(KeyCode.D))
-        //        animator.SetInteger("activeAnimation", 0);
-        //    else if (Input.GetKey(KeyCode.W))
-        //        animator.SetInteger("activeAnimation", 1);
-        //    else if (Input.GetKey(KeyCode.Mouse1))
-        //    {
-        //        if (comboCount >= 1)
-        //        {
-        //            animator.SetInteger("activeAnimation", 10);
-        //        }
-        //    }
-        //    else if (Input.GetKey(KeyCode.E))
-        //    {
-        //        if (TEIsGo)
-        //        {
-        //            animator.SetInteger("activeAnimation", 9);
-        //        }
-        //    }
-        //    else
-        //        animator.SetInteger("activeAnimation", 4);
-        //}
-
-        //else if (Input.GetKey(KeyCode.D))
-        //{
-        //    if (Input.GetKey(KeyCode.S))
-        //        animator.SetInteger("activeAnimation", 8);
-        //    else if (Input.GetKey(KeyCode.A))
-        //        animator.SetInteger("activeAnimation", 0);
-        //    else if (Input.GetKey(KeyCode.W))
-        //        animator.SetInteger("activeAnimation", 3);
-        //    else if (Input.GetKey(KeyCode.Mouse1))
-        //    {
-        //        if (comboCount >= 1)
-        //        {
-        //            animator.SetInteger("activeAnimation", 10);
-        //        }
-        //    }
-        //    else if (Input.GetKey(KeyCode.E))
-        //    {
-        //        if (TEIsGo)
-        //        {
-        //            animator.SetInteger("activeAnimation", 9);
-        //        }
-        //    }
-        //    else
-        //        animator.SetInteger("activeAnimation", 5);
-        //}
-
-        //else if (Input.GetKey(KeyCode.W))
-        //{
-        //    if (Input.GetKey(KeyCode.S))
-        //        animator.SetInteger("activeAnimation", 0);
-        //    else if (Input.GetKey(KeyCode.D))
-        //        animator.SetInteger("activeAnimation", 3);
-        //    else if (Input.GetKey(KeyCode.A))
-        //        animator.SetInteger("activeAnimation", 1);
-        //    else if (Input.GetKey(KeyCode.Mouse1))
-        //    {
-        //        if (comboCount >= 1)
-        //        {
-        //            animator.SetInteger("activeAnimation", 10);
-        //        }
-        //    }
-        //    else if (Input.GetKey(KeyCode.E))
-        //    {
-        //        if (TEIsGo)
-        //        {
-        //            animator.SetInteger("activeAnimation", 9);
-        //        }
-        //    }
-        //    else
-        //        animator.SetInteger("activeAnimation", 2);
-        //}
-
-        //else if (Input.GetKey(KeyCode.S))
-        //{
-        //    if (Input.GetKey(KeyCode.A))
-        //        animator.SetInteger("activeAnimation", 6);
-        //    else if (Input.GetKey(KeyCode.D))
-        //        animator.SetInteger("activeAnimation", 8);
-        //    else if (Input.GetKey(KeyCode.W))
-        //        animator.SetInteger("activeAnimation", 0);
-        //    else if (Input.GetKey(KeyCode.Mouse1))
-        //    {
-        //        if (comboCount >= 1)
-        //        {
-        //            animator.SetInteger("activeAnimation", 10);
-        //        }
-        //    }
-        //    else if (Input.GetKey(KeyCode.E))
-        //    {
-        //        if (TEIsGo)
-        //        {
-        //            animator.SetInteger("activeAnimation", 9);
-        //        }
-        //    }
-        //    else
-        //        animator.SetInteger("activeAnimation", 7);
-        //}
-
-        //else if (Input.GetKey(KeyCode.Mouse1))
-        //{
-        //    if (comboCount >= 1)
-        //    {
-        //        animator.SetInteger("activeAnimation", 10);
-        //    }
-        //}
-
-        //else if (Input.GetKey(KeyCode.E))
-        //{
-        //    if (TEIsGo)
-        //    {
-        //        animator.SetInteger("activeAnimation", 9);
-        //    }
-        //}
-
-        //else
-        //{
-        //    animator.SetInteger("activeAnimation", 0);
-        //}
     }
 
     private void PsiBatteryFire()
@@ -309,6 +186,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+
     private void TelekineticErasure()
     {
         if (TEIsGo)
@@ -319,16 +198,23 @@ public class PlayerController : MonoBehaviour
                     TEOnCooldown();
                 GetComponentInChildren<TelekineticBoltController>().animator.SetInteger("bolterSequence", -1);
                 var TelekineticErasure = Instantiate(Resources.Load("Prefabs/TidaAttacks/TelekineticErasure" , typeof(GameObject)), rayCastPointObj.transform.position + new Vector3(1.5f, 0, 0), Quaternion.identity,transform) as GameObject;
-
+                animator.SetTrigger("TelekineticErasure");
                 Destroy(transform.Find("TelekineticErasure(Clone)").gameObject, 2f);
             }
         }
     }
+
+
     private void TelekineticSlash() 
     {
         // insert TSIsGo && if you add CD
         if ( Input.GetMouseButtonDown(1))
         {
+            if (comboCount == 0)
+            {
+                animator.SetTrigger("TelekineticSlash");
+
+            }
             GetComponentInChildren<TelekineticBoltController>().animator.SetInteger("bolterSequence", -1);
             comboCount++;
             StartCoroutine(TidaStartsMeleeCombo());
@@ -392,8 +278,18 @@ public class PlayerController : MonoBehaviour
 
         doubtpurge.GetComponent<Animator>().SetInteger("isSlashing", comboCount);
         yield return new WaitForSeconds(.8f);
+        if (comboCount > 1)
+        {
+            animator.SetTrigger("TelekineticSlash2");
+
+        }
+        else
+        {
+            animator.SetTrigger("BreakCombo");
+        }
         //if (TSOnCooldown != null)
         //    TSOnCooldown();
+
         comboCount = 0;
         doubtpurge.GetComponent<Animator>().SetInteger("isSlashing", 0);
     }
