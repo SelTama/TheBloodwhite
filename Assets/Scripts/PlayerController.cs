@@ -281,15 +281,9 @@ public class PlayerController : MonoBehaviour
         if (comboCount > 1)
         {
             animator.SetTrigger("TelekineticSlash2");
-
-        }
-        else
-        {
-            animator.SetTrigger("BreakCombo");
         }
         //if (TSOnCooldown != null)
         //    TSOnCooldown();
-
         comboCount = 0;
         doubtpurge.GetComponent<Animator>().SetInteger("isSlashing", 0);
     }

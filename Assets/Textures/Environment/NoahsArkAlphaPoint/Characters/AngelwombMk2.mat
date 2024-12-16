@@ -70,7 +70,7 @@ Material:
     - _1EnergyWaveSpeed: {r: 0, g: -0.05, b: 0, a: 0}
     - _2EnergyColour: {r: 0.020870427, g: 0.05245231, b: 0.6320754, a: 0}
     - _2EnergyWavesSpeed: {r: 0, g: 0.08, b: 0, a: 0}
-    - _FromColor: {r: 0.10065861, g: 0.5471698, b: 0.46130225, a: 0}
-    - _ToColor: {r: 0, g: 1.1095331, b: 13.766362, a: 0}
+    - _FromColor: {r: 0, g: 0.49056602, b: 0.4717123, a: 0}
+    - _ToColor: {r: 0, g: 3.1359293, b: 13.76636, a: 0}
     - _WaveSpeed: {r: 0, g: 0.04, b: 0, a: 0}
   m_BuildTextureStacks: []
