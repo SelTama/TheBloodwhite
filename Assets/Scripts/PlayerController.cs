@@ -270,6 +270,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TidaStartsMeleeCombo()
     {
+        //bool continueCombo = new bool();
         GetComponentInChildren<TelekineticBoltController>().animator.SetInteger("bolterSequence", -1);
         if (comboCount > 2 ) {
             comboCount = 2;
