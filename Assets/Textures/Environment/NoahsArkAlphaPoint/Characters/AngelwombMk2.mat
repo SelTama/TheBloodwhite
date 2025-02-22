@@ -72,5 +72,6 @@ Material:
     - _2EnergyWavesSpeed: {r: 0, g: 0.08, b: 0, a: 0}
     - _FromColor: {r: 0, g: 0.49056602, b: 0.4717123, a: 0}
     - _ToColor: {r: 0, g: 3.1359293, b: 13.76636, a: 0}
+    - _Vector3: {r: -6.36, g: 1.49, b: 4.32, a: 0}
     - _WaveSpeed: {r: 0, g: 0.04, b: 0, a: 0}
   m_BuildTextureStacks: []
