@@ -17,8 +17,8 @@ public class MapCamera : MonoBehaviour
         {
             target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
             target.z = transform.position.z;
-            mapCamMoveSpeed =  (Camera.main.ScreenToViewportPoint(Input.mousePosition).x -.87f) * 200f;
-            transform.position = Vector3.MoveTowards(transform.position, target, Mathf.Clamp(mapCamMoveSpeed, 0, 26f) * Time.deltaTime);
+            mapCamMoveSpeed =  (Camera.main.ScreenToViewportPoint(Input.mousePosition).x -.87f) * 150f;
+            transform.position = Vector3.MoveTowards(transform.position, target, Mathf.Clamp(mapCamMoveSpeed, 0, 19.5f) * Time.deltaTime);
         }
         if (Camera.main.ScreenToViewportPoint(Input.mousePosition).y >= .9f)
         {
@@ -31,8 +31,8 @@ public class MapCamera : MonoBehaviour
         {
             target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
             target.z = transform.position.z;
-            mapCamMoveSpeed = (0.13f - Camera.main.ScreenToViewportPoint(Input.mousePosition).x) * 200f;
-            transform.position = Vector3.MoveTowards(transform.position, target, Mathf.Clamp( mapCamMoveSpeed, 0,26f) * Time.deltaTime);
+            mapCamMoveSpeed = (0.13f - Camera.main.ScreenToViewportPoint(Input.mousePosition).x) * 150f;
+            transform.position = Vector3.MoveTowards(transform.position, target, Mathf.Clamp( mapCamMoveSpeed, 0, 19.5f) * Time.deltaTime);
         }
         if (Camera.main.ScreenToViewportPoint(Input.mousePosition).y <= .1f)
         {

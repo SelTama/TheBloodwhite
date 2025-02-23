@@ -270,7 +270,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632533995113298937}
   m_LocalRotation: {x: -0, y: 0, z: -0.9672678, w: -0.2537579}
-  m_LocalPosition: {x: -4.27, y: -24.5, z: 0}
+  m_LocalPosition: {x: -3.06, y: -28.38, z: 0}
   m_LocalScale: {x: 2.0941663, y: 2.094999, z: 1.2565}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7052,8 +7052,8 @@ MonoBehaviour:
   tidaIsInCombat: 0
   tidaIsEnraged: 0
   activeTrigger: {fileID: 0}
-  combatModeMusic: {fileID: 8300000, guid: be885bf01ae114f468f42d93ee6bd31b, type: 3}
-  cruiseModeMusic: {fileID: 8300000, guid: e37771e88bae51b43841311776adbf6d, type: 3}
+  combatModeMusic: {fileID: 8300000, guid: 4146ff622f796db448e867f4e93b553e, type: 3}
+  cruiseModeMusic: {fileID: 8300000, guid: 23d8807555c702e4db6389e08474b2be, type: 3}
 --- !u!114 &1062765033209445789
 MonoBehaviour:
   m_ObjectHideFlags: 0

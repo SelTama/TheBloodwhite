@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         camObj = GameObject.FindWithTag("MainCamera"); 
         stageDimensions = GameObject.FindWithTag("BG").GetComponent<BackgroundMovement>().stageDimensions;
         BGMAudioSource = GetComponent<AudioSource>();
@@ -301,14 +301,6 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = new Vector3(0, 0, 0);
         stageDimensions = GameObject.FindWithTag("BG").GetComponent<BackgroundMovement>().stageDimensions;
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            gameObject.SetActive(false);
-        }
-        else
-        {
-            gameObject.SetActive(true);
-        }
     }
 
 
