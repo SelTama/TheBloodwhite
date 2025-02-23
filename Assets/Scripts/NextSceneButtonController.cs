@@ -29,7 +29,7 @@ public class NextSceneButtonController : MonoBehaviour
             {
                 int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
                 //playerObj.GetComponent<PlayerController>().stageDimensions = GameObject.FindWithTag("BG").GetComponent<BackgroundMovement>().stageDimensions;
-                SceneManager.LoadScene(currentSceneIndex + 1);
+                SceneManager.LoadScene(1);
             }
         }
         else

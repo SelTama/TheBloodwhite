@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa2cb8919c3e8f4aa4802e35465469c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 2
+  sceneIndex: 3
   playerObj: {fileID: 0}
   Button: {fileID: 916784248}
   PlayerCollision: 0
@@ -894,6 +894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 862360391}
+  - component: {fileID: 862360393}
   - component: {fileID: 862360390}
   - component: {fileID: 862360389}
   - component: {fileID: 862360392}
@@ -1022,6 +1023,20 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &862360393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862360388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e8be4d0e52e16488a58c61098d8020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapCamMoveSpeed: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!1 &916784248
 GameObject:
   m_ObjectHideFlags: 0
