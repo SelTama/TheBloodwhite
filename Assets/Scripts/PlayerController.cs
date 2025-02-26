@@ -65,46 +65,62 @@ public class PlayerController : MonoBehaviour
 
     private void Movements()
     {
+        reticule = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
+
         animator.SetFloat("X", animatorSpeedX);
         animator.SetFloat("Y", animatorSpeedY);
 
         if (Input.GetKey(KeyCode.D))
-        {         
+        {
+            
+
             if (transform.position.x <= stageDimensions.x)
             {               
                 transform.position += Vector3.right * tidaSpeed * Time.deltaTime;
+
             }
             //ANIMATIONS
-            animatorSpeedX = Mathf.Clamp( Mathf.SmoothDamp(animatorSpeedX,1,ref movementSpeedX,.2f), -1, 1);
+
+            animator.SetFloat("X", animatorSpeedX);
+            animatorSpeedX = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedX, 1, ref movementSpeedX, .2f), -1, 1);
+            TurnToMouseDirection();
 
             if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
+                TurnToMouseDirection();
             }
             if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
-            }
+                TurnToMouseDirection();
+            }          
         }
 
 
         if (Input.GetKey(KeyCode.A))
-        {            
+        {
             if (transform.position.x >= stageDimensions.w)
             {
                 transform.position += Vector3.left * tidaSpeed * Time.deltaTime;
             }
             //ANIMATIONS
+
+            animator.SetFloat("X", animatorSpeedX);
             animatorSpeedX = Mathf.Clamp( Mathf.SmoothDamp(animatorSpeedX, -1, ref movementSpeedX, .2f), -1, 1);
+            TurnToMouseDirection();
 
             if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
+                TurnToMouseDirection();
             }
             if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
+                TurnToMouseDirection();
             }
+
         }
 
         if (Input.GetKey(KeyCode.W))
@@ -238,6 +254,22 @@ public class PlayerController : MonoBehaviour
                 batterySequence = -1;
             }
             batterySequence++;
+        }
+    }
+
+    private void TurnToMouseDirection() 
+    {
+        if (reticule.x <= transform.position.x)
+        {
+            animator.SetFloat("X", -animatorSpeedX);
+            animator.SetFloat("Y", animatorSpeedY);
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        if (reticule.x >= transform.position.x)
+        {
+            animator.SetFloat("X", animatorSpeedX);
+            animator.SetFloat("Y", animatorSpeedY);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
     }
 
