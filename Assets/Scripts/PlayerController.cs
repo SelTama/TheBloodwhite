@@ -88,12 +88,10 @@ public class PlayerController : MonoBehaviour
             if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
-                TurnToMouseDirection();
             }
             if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
-                TurnToMouseDirection();
             }          
         }
 
@@ -113,12 +111,10 @@ public class PlayerController : MonoBehaviour
             if (!Input.GetKey(KeyCode.W) && animatorSpeedY >= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
-                TurnToMouseDirection();
             }
             if (!Input.GetKey(KeyCode.S) && animatorSpeedY <= 0)
             {
                 animatorSpeedY = Mathf.Clamp(Mathf.SmoothDamp(animatorSpeedY, 0, ref movementSpeedY, .4f), -1, 1);
-                TurnToMouseDirection();
             }
 
         }
