@@ -72,12 +72,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _MaskStrength: 1.3
-    - _WaveScale: 0.5
-    - _WaveStrength: 0.51
+    - _MaskStrength: 4.48
+    - _WaveScale: 0.84
+    - _WaveStrength: 0.41
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Speed: {r: 0.3, g: 0, b: 0, a: 0}
+    - _Speed: {r: 1.77, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

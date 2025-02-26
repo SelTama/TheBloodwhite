@@ -41,6 +41,12 @@
         },
         {
             "m_Id": "397bc623ef4d4e5e973261b1d542ff0e"
+        },
+        {
+            "m_Id": "8ba6cdb512d540f1b3fede6da113fab4"
+        },
+        {
+            "m_Id": "e1235bc42e1440e6a431e9c6d09d8ea0"
         }
     ],
     "m_Keywords": [],
@@ -4343,6 +4349,34 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "8ba6cdb512d540f1b3fede6da113fab4",
+    "m_Guid": {
+        "m_GuidSerialized": "3ae991eb-8be2-411f-990b-b2e9ba585f72"
+    },
+    "m_Name": "Range",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Range",
+    "m_DefaultReferenceName": "_Range",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": -0.4399999976158142,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "8bbbc719bbc449e9b085dc2bfb428a68",
@@ -6064,6 +6098,12 @@
         },
         {
             "m_Id": "397bc623ef4d4e5e973261b1d542ff0e"
+        },
+        {
+            "m_Id": "8ba6cdb512d540f1b3fede6da113fab4"
+        },
+        {
+            "m_Id": "e1235bc42e1440e6a431e9c6d09d8ea0"
         }
     ]
 }
@@ -6459,6 +6499,34 @@
         "e31": 0.0,
         "e32": 0.0,
         "e33": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "e1235bc42e1440e6a431e9c6d09d8ea0",
+    "m_Guid": {
+        "m_GuidSerialized": "96c55882-0857-494a-9b0d-4d101e4f84e1"
+    },
+    "m_Name": "Fuzziness",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Fuzziness",
+    "m_DefaultReferenceName": "_Fuzziness",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.5699999928474426,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
     }
 }
 
