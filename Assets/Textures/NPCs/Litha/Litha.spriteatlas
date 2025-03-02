@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Litha
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Standalone
+      m_MaxTextureSize: 8192
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 25
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_IgnorePlatformSupport: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: adf0fbbd9a941ba4bb411b2e88521b6c, type: 3}
+    - {fileID: 2800000, guid: f0588440df18e3e41a5095ea53cb30ff, type: 3}
+    - {fileID: 2800000, guid: 91ac9f383b8b91d40975eac326e98b96, type: 3}
+    - {fileID: 2800000, guid: e063b221707280d4ea41652a50fa0281, type: 3}
+    - {fileID: 2800000, guid: 0b2a47aae631a2b48bd20e1dcd7f1b70, type: 3}
+    - {fileID: 2800000, guid: 6b1ccf5f90d714f4c8d16db617fcf355, type: 3}
+    - {fileID: 2800000, guid: f13e44278f687ba4689157f8795faa1f, type: 3}
+    - {fileID: 2800000, guid: 8621d1310eb3fcb47af18f9b672f3da3, type: 3}
+    - {fileID: 2800000, guid: 65ba51480427f87498b9fcf94d3a2ddf, type: 3}
+    - {fileID: 2800000, guid: 8bc8c0901767d6a4c9893dcf355da702, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - f0588440df18e3e41a5095ea53cb30ff: 21300000
+    - 8bc8c0901767d6a4c9893dcf355da702: 21300000
+    - e063b221707280d4ea41652a50fa0281: 21300000
+    - 8621d1310eb3fcb47af18f9b672f3da3: 21300000
+    - f13e44278f687ba4689157f8795faa1f: 21300000
+    - 91ac9f383b8b91d40975eac326e98b96: 21300000
+    - 65ba51480427f87498b9fcf94d3a2ddf: 21300000
+    - 0b2a47aae631a2b48bd20e1dcd7f1b70: 21300000
+    - adf0fbbd9a941ba4bb411b2e88521b6c: 21300000
+    - 6b1ccf5f90d714f4c8d16db617fcf355: 21300000
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: f0588440df18e3e41a5095ea53cb30ff, type: 3}
+  - {fileID: 21300000, guid: 8bc8c0901767d6a4c9893dcf355da702, type: 3}
+  - {fileID: 21300000, guid: e063b221707280d4ea41652a50fa0281, type: 3}
+  - {fileID: 21300000, guid: 8621d1310eb3fcb47af18f9b672f3da3, type: 3}
+  - {fileID: 21300000, guid: f13e44278f687ba4689157f8795faa1f, type: 3}
+  - {fileID: 21300000, guid: 91ac9f383b8b91d40975eac326e98b96, type: 3}
+  - {fileID: 21300000, guid: 65ba51480427f87498b9fcf94d3a2ddf, type: 3}
+  - {fileID: 21300000, guid: 0b2a47aae631a2b48bd20e1dcd7f1b70, type: 3}
+  - {fileID: 21300000, guid: adf0fbbd9a941ba4bb411b2e88521b6c, type: 3}
+  - {fileID: 21300000, guid: 6b1ccf5f90d714f4c8d16db617fcf355, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CrescentPulse
+  - Wing2
+  - Leylines
+  - Tailwing3
+  - Tailwing2
+  - Head
+  - Wing1
+  - LithaTail
+  - Crescent
+  - Tailwing1
+  m_RenderDataMap: {}
+  m_Tag: Litha
+  m_IsVariant: 0

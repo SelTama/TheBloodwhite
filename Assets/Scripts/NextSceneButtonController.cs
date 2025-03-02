@@ -28,8 +28,8 @@ public class NextSceneButtonController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-                //playerObj.GetComponent<PlayerController>().stageDimensions = GameObject.FindWithTag("BG").GetComponent<BackgroundMovement>().stageDimensions;
-                SceneManager.LoadScene(1);
+                playerObj.GetComponent<PlayerController>().stageDimensions = GameObject.FindWithTag("BG").GetComponent<BackgroundMovement>().stageDimensions;
+                SceneManager.LoadScene(currentSceneIndex + 1);
             }
         }
         else
