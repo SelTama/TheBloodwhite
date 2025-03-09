@@ -56,6 +56,10 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 81f463f6bbb68c744907ee23e3cca430, type: 3}
     - {fileID: 2800000, guid: d9686f31428c24b49a0afc72e69ce08a, type: 3}
     - {fileID: 2800000, guid: 1f4c5a4aefd69cf45b11a87f8b3bd8fb, type: 3}
+    - {fileID: 2800000, guid: f6bd69785e5db364f8151d15a74da288, type: 3}
+    - {fileID: 2800000, guid: 6023a0244071eb04686863389a60ed65, type: 3}
+    - {fileID: 2800000, guid: deaa093297a164a498e5fcc7a71de95b, type: 3}
+    - {fileID: 21300000, guid: d87737043a1b5e543906498b4f59a52a, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -63,10 +67,14 @@ SpriteAtlas:
     - f71a123123215cf4480ed88f89aa467d: 21300000
     - d9686f31428c24b49a0afc72e69ce08a: 21300000
     - 281ded51a37ca0f4f8d6a478084f2b43: 21300000
+    - deaa093297a164a498e5fcc7a71de95b: 21300000
+    - d87737043a1b5e543906498b4f59a52a: 21300000
+    - 6023a0244071eb04686863389a60ed65: 21300000
     - 74162b54be5a20d44b00468b83f49716: 21300000
     - 81f463f6bbb68c744907ee23e3cca430: 21300000
     - d13cf6088b9b408458b5df23ddbfcf28: 21300000
     - fab88f681a32a7c44b43ad8c71b98041: 21300000
+    - f6bd69785e5db364f8151d15a74da288: 21300000
     - 1f4c5a4aefd69cf45b11a87f8b3bd8fb: 21300000
     - 113502ba555ea1e4ea6f2950055f0358: 21300000
     - 9b7d6ada6c9901e49ac6466871a0702d: 21300000
@@ -76,10 +84,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: f71a123123215cf4480ed88f89aa467d, type: 3}
   - {fileID: 21300000, guid: d9686f31428c24b49a0afc72e69ce08a, type: 3}
   - {fileID: 21300000, guid: 281ded51a37ca0f4f8d6a478084f2b43, type: 3}
+  - {fileID: 21300000, guid: deaa093297a164a498e5fcc7a71de95b, type: 3}
+  - {fileID: 21300000, guid: d87737043a1b5e543906498b4f59a52a, type: 3}
+  - {fileID: 21300000, guid: 6023a0244071eb04686863389a60ed65, type: 3}
   - {fileID: 21300000, guid: 74162b54be5a20d44b00468b83f49716, type: 3}
   - {fileID: 21300000, guid: 81f463f6bbb68c744907ee23e3cca430, type: 3}
   - {fileID: 21300000, guid: d13cf6088b9b408458b5df23ddbfcf28, type: 3}
   - {fileID: 21300000, guid: fab88f681a32a7c44b43ad8c71b98041, type: 3}
+  - {fileID: 21300000, guid: f6bd69785e5db364f8151d15a74da288, type: 3}
   - {fileID: 21300000, guid: 1f4c5a4aefd69cf45b11a87f8b3bd8fb, type: 3}
   - {fileID: 21300000, guid: 113502ba555ea1e4ea6f2950055f0358, type: 3}
   - {fileID: 21300000, guid: 9b7d6ada6c9901e49ac6466871a0702d, type: 3}
@@ -88,13 +100,17 @@ SpriteAtlas:
   - Cube1_2
   - Cube4_4
   - Cube4_2
+  - Cube3outline
+  - Cube4outline
+  - Cube2outline
   - Cube3_0
   - Cube4_3
   - Cube3_1
-  - Cube4_0
+  - Cube2_0
+  - Cube1outline
   - Cube4_5
   - Cube1_1
-  - Cube4_1
+  - Cube2_1
   - Cube1_0
   m_RenderDataMap: {}
   m_Tag: UnseemlyCubes

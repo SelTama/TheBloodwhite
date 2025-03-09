@@ -42,11 +42,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _MaskStrength: 1.19
-    - _WaveScale: 0.02
-    - _WaveStrength: 2.56
+    - _MaskStrength: 1.15
+    - _WaveScale: 0.03
+    - _WaveStrength: 4
     m_Colors:
-    - _Speed: {r: 10, g: 0, b: 0, a: 0}
+    - _Speed: {r: 15, g: 15, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7993794543014510497
 MonoBehaviour:

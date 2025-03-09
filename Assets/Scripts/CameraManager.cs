@@ -30,8 +30,8 @@ public class CameraManager : MonoBehaviour
     private void MovementBoundaries()
     {
         Camera camObj = Camera.main;
-        leftLimit = camObj.ViewportToWorldPoint(new Vector3(.05f, 0, Camera.main.nearClipPlane)).x;
-        rightLimit = camObj.ViewportToWorldPoint(new Vector3(.4f, 0, Camera.main.nearClipPlane)).x;
+        leftLimit = camObj.ViewportToWorldPoint(new Vector3(.3f, 0, Camera.main.nearClipPlane)).x;
+        rightLimit = camObj.ViewportToWorldPoint(new Vector3(.7f, 0, Camera.main.nearClipPlane)).x;
         upLimit = camObj.ViewportToWorldPoint(new Vector3(0, .9f, Camera.main.nearClipPlane)).y;
         downLimit = camObj.ViewportToWorldPoint(new Vector3(0, .1f, Camera.main.nearClipPlane)).y;
 
@@ -110,5 +110,6 @@ public class CameraManager : MonoBehaviour
         }
 
     }
+
 
 }
