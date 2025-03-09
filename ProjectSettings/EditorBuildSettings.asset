@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/UniverseMap.unity
     guid: 3c4506ae928ee4048984f742fd01eefe
   - enabled: 1
+    path: Assets/Scenes/TerraReverseMassacre.unity
+    guid: daebe5f0b7e8c244fbca153e5a448b04
+  - enabled: 1
     path: Assets/Scenes/NoahsArkAlphaPoint.unity
     guid: e86d16f8879a69f438be8cd3f562af6a
   - enabled: 1
