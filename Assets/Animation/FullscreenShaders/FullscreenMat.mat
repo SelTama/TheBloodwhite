@@ -43,5 +43,5 @@ Material:
     - _EffectSpeed: 0
     - _TimePassed: 0
     m_Colors:
-    - _FocalPoint: {r: 0.31923234, g: 0.5818552, b: 120, a: 0}
+    - _FocalPoint: {r: 0.4996935, g: 0.36997342, b: 70, a: 0}
   m_BuildTextureStacks: []
