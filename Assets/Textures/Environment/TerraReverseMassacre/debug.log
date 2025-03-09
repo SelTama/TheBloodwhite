@@ -1,0 +1,3 @@
+[0303/002938.193:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
+[0303/002938.951:ERROR:local_storage_context_mojo.cc(706)] Lost connection to database
+[0307/103616.998:ERROR:media_internals.cc(112)] Cannot get RenderProcessHost
