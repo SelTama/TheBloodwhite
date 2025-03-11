@@ -45,7 +45,7 @@ Material:
     - _PosX: 0.01
     - _PosY: 0.01
     m_Colors:
-    - _MovementMultiplier: {r: 0.2, g: 0.2, b: 0, a: 0}
+    - _MovementMultiplier: {r: 0.13, g: 0.13, b: 0, a: 0}
     - _PosX: {r: 0, g: 0, b: 0, a: 0}
     - _PosY: {r: 0.01, g: 0.03, b: 0, a: 0}
   m_BuildTextureStacks: []
