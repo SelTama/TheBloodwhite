@@ -6,10 +6,7 @@ using UnityEngine.UI;
 
 public class TidaStateScript : MonoBehaviour
 {
-
-
     public event EventHandler OnTidaEnraged;
-
 
     public ArmourModel[] armourObjList;
 
@@ -43,7 +40,6 @@ public class TidaStateScript : MonoBehaviour
     {
         return combatModeMusic;
     }
-
 
 
     private void OnTriggerEnter2D(Collider2D collision)

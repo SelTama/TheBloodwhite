@@ -7012,35 +7012,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   armourObjList:
   - skin: {fileID: 2866205402562445958}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   - skin: {fileID: 8169899101732999841}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   - skin: {fileID: 3220127830006971530}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   - skin: {fileID: 4191187032688552012}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   - skin: {fileID: 2476322063423657101}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   - skin: {fileID: 5519780194772805849}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   - skin: {fileID: 4916964438836398723}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   - skin: {fileID: 5927040190968280556}
-    armourMaterial: {fileID: 2100000, guid: 8ef0ee1b2a195d3479f35d928abe7801, type: 2}
+    armourMaterial: {fileID: 2100000, guid: db18f1c3b64d7a4468a4ff3084ecf74c, type: 2}
     armourMaterialEnraged: {fileID: 2100000, guid: 19b06b2c00bdeba46bd73d7ba2147c13,
       type: 2}
   tidaFury: 0
@@ -7297,7 +7297,7 @@ SortingGroup:
   m_SortingLayerID: -35439177
   m_SortingLayer: 11
   m_SortingOrder: 99
-  m_SortAtRoot: 0
+  m_SortAtRoot: 1
 --- !u!1 &8375656784294108054
 GameObject:
   m_ObjectHideFlags: 0

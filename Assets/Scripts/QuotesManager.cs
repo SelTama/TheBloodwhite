@@ -1,13 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class QuotesManager : MonoBehaviour
 {
 
+    public delegate void CharacterInteraction();
+    public static event CharacterInteraction IsInteracted;
+
     public GameObject playerObj;
     public bool NPCCollision = false;
     public int CollisionNPC;
+    public GameObject Zavi;
+    public GameObject Seleth;
+
+
+
 
     public List<QuoteModel> QuotesList = new List<QuoteModel>();
 
@@ -19,8 +28,7 @@ public class QuotesManager : MonoBehaviour
     }
     
     void Update()
-    {           
-               
+    {                      
         if (NPCCollision)
         {
             QuotesList[CollisionNPC].FButton.SetActive(true);
@@ -28,7 +36,8 @@ public class QuotesManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 QuotesList[CollisionNPC].NPCQuote.SetActive(true);
-
+                if (IsInteracted != null)
+                    IsInteracted();
             }
         }
         else

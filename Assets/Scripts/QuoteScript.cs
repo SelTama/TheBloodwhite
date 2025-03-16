@@ -1,20 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TriggerAreaScript;
 
 public class QuoteScript : MonoBehaviour
 {
 
-
-
-    //public GameObject sliderObj;
-    //public float startPos = 10f;
-    //public float endPos = -10f;
-    //private float slideSpeed = .04f;
-
-
     private void Awake()
-
     {
         gameObject.SetActive(false);
     }
@@ -34,20 +27,10 @@ public class QuoteScript : MonoBehaviour
 
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.F))
         {
             gameObject.SetActive(false);
         }
-
-
-        //if (endPos > sliderObj.transform.localPosition.y)
-        //{
-        //    gameObject.SetActive(false);
-        //}
-        //else
-        //{
-        //    sliderObj.transform.localPosition -= Vector3.up * slideSpeed;
-        //}
     }
+
 }
