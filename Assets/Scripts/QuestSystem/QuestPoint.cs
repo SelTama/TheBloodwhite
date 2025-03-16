@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
 
 [RequireComponent(typeof(CircleCollider2D))]
 public class QuestPoint : MonoBehaviour
@@ -11,6 +10,11 @@ public class QuestPoint : MonoBehaviour
 
     [SerializeField] private QuestInfoSO questInfoForPoint;
 
+    [Header("Quest")]
+
+    [SerializeField] private bool startPoint = true;
+    [SerializeField] private bool finishPoint = true;
+
 
     private bool playerIsNear = false;
 
@@ -18,10 +22,12 @@ public class QuestPoint : MonoBehaviour
 
     private QuestState currentQuestState;
 
+    private QuestIcon questIcon;
 
     private void Awake()
     {
         questId = questInfoForPoint.id;
+        questIcon = GetComponentInChildren<QuestIcon>();
     }
     private void Update()
     {
@@ -48,9 +54,18 @@ public class QuestPoint : MonoBehaviour
 
         if (playerIsNear && Input.GetKeyDown(KeyCode.F))
         {
-            EventManager.instance.questEvents.StartQuest(questId);
-            EventManager.instance.questEvents.AdvanceQuest(questId);
-            EventManager.instance.questEvents.FinishQuest(questId);
+
+            if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
+            {
+                EventManager.instance.questEvents.StartQuest(questId);
+            }
+            else if (currentQuestState.Equals(QuestState.CAN_FINISH) && finishPoint)
+            {
+                EventManager.instance.questEvents.FinishQuest(questId);
+            }
+            //EventManager.instance.questEvents.StartQuest(questId);
+            //EventManager.instance.questEvents.AdvanceQuest(questId);
+            //EventManager.instance.questEvents.FinishQuest(questId);
         }
     }
 
@@ -60,7 +75,8 @@ public class QuestPoint : MonoBehaviour
         if (quest.info.id.Equals(questId))
         {
             currentQuestState = quest.state;
-            Debug.Log("quest with id : " + questId + "update to state: " + currentQuestState);
+            questIcon.SetState(currentQuestState, startPoint, finishPoint);
+            //Debug.Log("quest with id : " + questId + "update to state: " + currentQuestState);
         }
     }
 
