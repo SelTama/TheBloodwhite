@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
@@ -7,8 +8,11 @@ public class QuestManager : MonoBehaviour
     private Dictionary<string, Quest> questMap;
 
 
+    public GameObject playerObj;
+
     private void Awake()
     {
+        playerObj = GameObject.FindWithTag("Player");
         questMap = CreateQuestMap();
 
         //TEST
@@ -18,6 +22,17 @@ public class QuestManager : MonoBehaviour
         //Debug.Log(quest.CurrentStepExists());
     }
 
+    private void Update()
+    {
+        // Loop through ALL quests
+        foreach (Quest quest in questMap.Values)
+        {
+            if (quest.state == QuestState.REQUIREMENTS_NOT_MET && CheckRequirementsMet(quest))
+            {
+                ChangeQuestState(quest.info.id, QuestState.CAN_START);
+            }
+        }
+    }
     private void OnEnable()
     {
         EventManager.instance.questEvents.onStartQuest += StartQuest;
@@ -67,7 +82,40 @@ public class QuestManager : MonoBehaviour
         return quest;
     }
 
+    private bool CheckRequirementsMet(Quest quest) 
+    {
+        bool meetsRequirements = true;
 
+        // check if Tida is sane
+
+        if (playerObj.GetComponent<TidaStateScript>().tidaMadnessLevel >= 1000)
+        {
+            meetsRequirements = false;
+            // add this break statement here so that we don't continue on to the next quest
+            // since we've proven meetsRequirements to be false at this point.
+        }
+
+        // check prerequisite quests 
+
+        foreach (QuestInfoSO prerequisiteQuestInfo in quest.info.questPrerequisites)
+        {
+            if (GetQuestById(prerequisiteQuestInfo.id).state  != QuestState.FINISHED)
+            {
+                meetsRequirements = false;
+            }
+            break;
+        }
+        return meetsRequirements;
+    
+    }
+
+    // any time you want to update the state
+    private void ChangeQuestState(string id, QuestState state) 
+    {
+        Quest quest = GetQuestById(id);
+        quest.state = state;
+        EventManager.instance.questEvents.QuestStateChange(quest);
+    }
 
     private void StartQuest(string id) 
     {
