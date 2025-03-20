@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <id>k__BackingField: SpeakToZaviseleth
   displayName: SpeakToZaviseleth
+  sanityRequirement: 0
   questPrerequisites: []
-  questStepPrefabs: []
-  MadnessReward: 0
-  MemoryPiece: 0
+  questStepPrefabs:
+  - {fileID: 8840921418213175285, guid: c91d9f8000138eb40b481e9c3d165d45, type: 3}
+  MadnessReward: 1
+  MemoryPiece: 1
   WeaponReward: {fileID: 0}

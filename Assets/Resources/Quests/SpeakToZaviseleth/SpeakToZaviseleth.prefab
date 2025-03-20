@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23fbd82bb47d4a40952c556e20d9fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speakToZavi: 0
   speakToSeleth: 0
+  questComplete: 0

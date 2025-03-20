@@ -13,17 +13,4 @@ public enum QuestState
    CAN_FINISH,
 
    FINISHED
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

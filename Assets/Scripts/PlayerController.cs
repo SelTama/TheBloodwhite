@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
         PsionicBolt();
         SetBGM();
         TelekineticErasure();
+        BuildFury();
     }
 
     private void Movements()
@@ -169,6 +170,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void BuildFury() {
+        if (Input.GetKey(KeyCode.R))
+        {
+            GetComponent<TidaStateScript>().tidaFury++;
+        }
+    
+    
+    }
     private void PsiBatteryFire()
     {
         if (Input.GetMouseButton(0))

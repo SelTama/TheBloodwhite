@@ -15,6 +15,7 @@ public class QuestPoint : MonoBehaviour
     [SerializeField] private bool startPoint = true;
     [SerializeField] private bool finishPoint = true;
 
+    public GameObject button;
 
     private bool playerIsNear = false;
 
@@ -54,18 +55,21 @@ public class QuestPoint : MonoBehaviour
 
         if (playerIsNear && Input.GetKeyDown(KeyCode.F))
         {
+            button.SetActive(true);
 
-            if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                EventManager.instance.questEvents.StartQuest(questId);
-            }
-            else if (currentQuestState.Equals(QuestState.CAN_FINISH) && finishPoint)
-            {
-                EventManager.instance.questEvents.FinishQuest(questId);
-            }
-            //EventManager.instance.questEvents.StartQuest(questId);
-            //EventManager.instance.questEvents.AdvanceQuest(questId);
-            //EventManager.instance.questEvents.FinishQuest(questId);
+
+                if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
+                {
+                    EventManager.instance.questEvents.StartQuest(questId);
+                }
+                else if (currentQuestState.Equals(QuestState.CAN_FINISH) && finishPoint)
+                {
+                    EventManager.instance.questEvents.FinishQuest(questId);
+                }
+            }          
+
         }
     }
 
@@ -76,7 +80,7 @@ public class QuestPoint : MonoBehaviour
         {
             currentQuestState = quest.state;
             questIcon.SetState(currentQuestState, startPoint, finishPoint);
-            //Debug.Log("quest with id : " + questId + "update to state: " + currentQuestState);
+            Debug.Log("quest with id : " + questId + "update to state: " + currentQuestState);
         }
     }
 

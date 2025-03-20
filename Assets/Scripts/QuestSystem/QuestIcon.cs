@@ -28,10 +28,10 @@ public class QuestIcon : MonoBehaviour
                 if (startPoint) { canStartIcon.SetActive(true); }
                 break;
             case QuestState.IN_PROGRESS:
-                if (startPoint) { requirementsNotMetToStartIcon.SetActive(true); }
+                if (finishPoint) { requirementsNotMetToFinishIcon.SetActive(true); }
                 break;
             case QuestState.CAN_FINISH:
-                if (startPoint) { requirementsNotMetToStartIcon.SetActive(true); }
+                if (finishPoint) { canFinishIcon.SetActive(true); }
                 break;
             case QuestState.FINISHED:                
                 break;

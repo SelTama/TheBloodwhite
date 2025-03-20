@@ -5,8 +5,25 @@ using UnityEngine;
 
 public class SpeakToZaviseleth : QuestStep
 {
-    public bool speakToZavi = false;
-    public bool speakToSeleth = false;
+    [Header("SpeakToZaviseleth")]
+
+    [Header("Objectives")]
+
+    private bool speakToZavi = false;
+    private bool speakToSeleth = false;
+
+    public bool questInProgress = false;
+    public bool questComplete = false;
+
+    private void Start()
+    {
+        questInProgress = false;
+    }
+
+    //private void Update()
+    //{
+    //    CompleteQuest();
+    //}
 
 
     private void OnEnable()
@@ -24,23 +41,37 @@ public class SpeakToZaviseleth : QuestStep
     private void SelethIsSpoken()
     {
         speakToSeleth = true;
-
-        if (speakToZavi && speakToSeleth)
+        Debug.Log("spoke to seleth");
+        if (speakToZavi)
         {
+            questComplete = true;
             FinishQuestStep();
-        }
+        }     
     }
 
     private void ZaviIsSpoken()
     {
         speakToZavi = true;
-        
-
-        if (speakToZavi && speakToSeleth)
+        Debug.Log("spoke to zavi");
+        if (speakToSeleth)
         {
+            questComplete = true;
             FinishQuestStep();
         }
-    }    
-    
 
+    }
+
+    //private void CompleteQuest() 
+    //{
+    //    if (questComplete)
+    //    {
+    //        FinishQuestStep();
+    //        //FinishTheQuest();
+    //    }    
+    //}
+    ////private void FinishTheQuest() 
+    ////{
+
+    ////    Destroy(this.gameObject);
+    //}
 }

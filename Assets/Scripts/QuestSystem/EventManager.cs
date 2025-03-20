@@ -19,12 +19,5 @@ public class EventManager : MonoBehaviour
 
         questEvents = new QuestEvents();
 
-
-
-
-
-
-
-
     }
 }

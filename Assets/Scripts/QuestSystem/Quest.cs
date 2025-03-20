@@ -7,9 +7,6 @@ public class Quest
     //static info
     public QuestInfoSO info;
 
-
-
-
     //state info
 
     public QuestState state;
@@ -44,9 +41,12 @@ public class Quest
         GameObject questStepPrefab = GetCurrentQuestStepPrefab();
         if (questStepPrefab != null)
         {
-            Object.Instantiate<GameObject>(questStepPrefab, parentTransform);
+            QuestStep questStep = Object.Instantiate<GameObject>(questStepPrefab, parentTransform).GetComponent<QuestStep>();
+            questStep.InitializeQuestStep(info.id);
         }
     }
+
+
     private GameObject GetCurrentQuestStepPrefab() 
     {
         GameObject questStepPrefab = null;
@@ -57,7 +57,7 @@ public class Quest
         else
         {
             Debug.LogWarning("tried to get quest step prefab but stepIndex was out of range indicating that"
-                + "theres no curre step: QuestId=" + info.id + ",step index=" + currentQuestStepIndex);
+                + "theres no current step: QuestId=" + info.id + ",step index=" + currentQuestStepIndex);
         }
         return questStepPrefab;
     

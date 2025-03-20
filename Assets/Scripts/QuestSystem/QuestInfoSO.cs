@@ -12,9 +12,13 @@ public class QuestInfoSO : ScriptableObject
 
     public string displayName;
 
+
     [Header("Requirements")]
 
+    public int sanityRequirement;
+
     public QuestInfoSO[] questPrerequisites;
+
 
     [Header("Steps")]
 
@@ -27,12 +31,6 @@ public class QuestInfoSO : ScriptableObject
     public int MemoryPiece;
 
     public GameObject WeaponReward;
-
-
-
-
-
-
 
     //Make the id the name of the SO 
     private void OnValidate()
