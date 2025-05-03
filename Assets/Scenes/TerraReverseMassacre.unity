@@ -12118,7 +12118,7 @@ Canvas:
   m_GameObject: {fileID: 506222900}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 862360390}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -12129,7 +12129,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1677446185
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &506222905
@@ -17250,7 +17250,7 @@ MonoBehaviour:
   m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1815
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -32507,6 +32507,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MadnessUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7256294444054859927, guid: 99ecd6aa22744784a813d98cc4c16a54,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e45f98476f8dfd4298aed1db8aa55d2, type: 2}
     - target: {fileID: 9087237433337786273, guid: 99ecd6aa22744784a813d98cc4c16a54,
         type: 3}
       propertyPath: m_Pivot.x
@@ -32707,6 +32712,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 98.700195
       objectReference: {fileID: 0}
+    - target: {fileID: 1766401377090967886, guid: ebbb20acc35954341bfc6173a8cc6615,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: 9efacb45b0f26314cab8f8748e1d91fb, type: 2}
     - target: {fileID: 4828753964352251304, guid: ebbb20acc35954341bfc6173a8cc6615,
         type: 3}
       propertyPath: m_Name
