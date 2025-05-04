@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
                 if (TEOnCooldown != null)
                     TEOnCooldown();
                 GetComponentInChildren<TelekineticBoltController>().animator.SetInteger("bolterSequence", -1);
-                var TelekineticErasure = Instantiate(Resources.Load("Prefabs/TidaAttacks/TelekineticErasure" , typeof(GameObject)), rayCastPointObj.transform.position + new Vector3(1.5f, 0, 0), Quaternion.identity,transform) as GameObject;
+                var TelekineticErasure = Instantiate(Resources.Load("Prefabs/TidaAttacks/TelekineticErasure" , typeof(GameObject)), rayCastPointObj.transform.position, Quaternion.Euler(0, transform.eulerAngles.y, 0 ),transform) as GameObject;
                 animator.SetTrigger("TelekineticErasure");
                 Destroy(transform.Find("TelekineticErasure(Clone)").gameObject, 2f);
             }
