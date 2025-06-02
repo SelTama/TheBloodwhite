@@ -43,10 +43,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _Angle: 0.1
-    - _EffectScale: 12
+    - _EffectScale: 22.16
     - _Float: 0
     m_Colors:
-    - _Color: {r: 2.2973967, g: 0, b: 0.0721694, a: 0}
+    - _Color: {r: 0.9883373, g: 0, b: 0.03104719, a: 0}
     - _Pos: {r: 0.5, g: 0, b: 0, a: 0}
     - _Speed: {r: 0, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []

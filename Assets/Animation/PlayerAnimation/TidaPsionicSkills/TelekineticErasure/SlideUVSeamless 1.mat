@@ -87,8 +87,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.38416976, g: 0, b: 4.237095, a: 1}
-    - _EmissionColor: {r: 5.971038, g: 0, b: 18.164822, a: 1}
+    - _Color: {r: 0.43090206, g: 0.35388744, b: 2.143547, a: 1}
+    - _EmissionColor: {r: 9.157825, g: 10.390088, b: 23.96863, a: 1}
     - _SlideSpeed: {r: -0.54, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_BuildTextureStacks: []
