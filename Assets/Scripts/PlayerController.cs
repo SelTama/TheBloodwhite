@@ -95,7 +95,6 @@ public class PlayerController : MonoBehaviour
             }          
         }
 
-
         if (Input.GetKey(KeyCode.A))
         {
             if (transform.position.x >= stageDimensions.w)
@@ -222,11 +221,11 @@ public class PlayerController : MonoBehaviour
         // insert TSIsGo && if you add CD
         if ( Input.GetMouseButtonDown(1))
         {
-            if (comboCount == 0)
-            {
-                animator.SetTrigger("TelekineticSlash");
+            //if (comboCount == 0)
+            //{
+            //    animator.SetTrigger("TelekineticSlash");
 
-            }
+            //}
             GetComponentInChildren<TelekineticBoltController>().animator.SetInteger("bolterSequence", -1);
             comboCount++;
             StartCoroutine(TidaStartsMeleeCombo());
@@ -306,6 +305,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(comboCount);
 
         doubtpurge.GetComponent<Animator>().SetInteger("isSlashing", comboCount);
+        animator.SetInteger("isSlashing", comboCount);
         yield return new WaitForSeconds(.8f);
         if (comboCount > 1)
         {
@@ -315,6 +315,7 @@ public class PlayerController : MonoBehaviour
         //    TSOnCooldown();
         comboCount = 0;
         doubtpurge.GetComponent<Animator>().SetInteger("isSlashing", 0);
+        animator.SetInteger("isSlashing", 0);
     }
 
 
