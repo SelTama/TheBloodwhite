@@ -309,7 +309,8 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(.8f);
         if (comboCount > 1)
         {
-            animator.SetTrigger("TelekineticSlash2");
+            animator.SetInteger("isSlashing", comboCount);
+            doubtpurge.GetComponent<Animator>().SetInteger("isSlashing", comboCount);
         }
         //if (TSOnCooldown != null)
         //    TSOnCooldown();

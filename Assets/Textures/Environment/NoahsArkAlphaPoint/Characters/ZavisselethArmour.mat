@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 7
+  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -65,13 +65,16 @@ Material:
     m_Floats:
     - _1EnergyScale: 222
     - _2EnergyScale: 222
+    - _Fuzziness: 0.57
+    - _Range: -0.44
     m_Colors:
     - _1EnergyColour: {r: 0, g: 0.60716, b: 0.754717, a: 0}
     - _1EnergyWaveSpeed: {r: 0, g: -0.05, b: 0, a: 0}
     - _2EnergyColour: {r: 0.020870427, g: 0.05245231, b: 0.6320754, a: 0}
     - _2EnergyWavesSpeed: {r: 0, g: 0.08, b: 0, a: 0}
     - _FromColor: {r: 0, g: 0.49056602, b: 0.4717123, a: 0}
-    - _ToColor: {r: 0, g: 3.1359293, b: 13.76636, a: 0}
+    - _ToColor: {r: 0, g: 1.3649927, b: 5.9921575, a: 0}
     - _Vector3: {r: -6.36, g: 1.49, b: 4.32, a: 0}
     - _WaveSpeed: {r: 0, g: 0.04, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
