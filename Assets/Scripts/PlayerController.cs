@@ -4,21 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-
-
 public class PlayerController : MonoBehaviour
 {
+
+    //COOLDOWNS
     public delegate void Cooldown();
     public static event Cooldown TEOnCooldown;
-    //public static event Cooldown TSOnCooldown;
-
     public bool TEIsGo = true;
+    //public static event Cooldown TSOnCooldown;
     //public bool TSIsGo = true;
 
+    [Header("MOVEMENTS")]
+    //MOVEMENTS
+    public GameObject Tida;
+    public GameObject LithaAvatar;
+    public float angle;
+    public float mapMoveSpeed = 20f;
+    public Vector3 target;
+
+    private float movementSpeedX = 6f;
+    private float movementSpeedY = 6f;
+    private float tidaSpeed = 6f;
 
 
-
+    //CONTROL RELATED
+    [Header("SKILL & ANIMATION")]
     public int comboCount = 0;
     public Animator animator;
     public Rigidbody2D rayCastPointObj;
@@ -26,12 +36,9 @@ public class PlayerController : MonoBehaviour
     public GameObject doubtpurge;
     public GameObject bolt;
     public int batterySequence = 0;
-    private float tidaSpeed = 6f;
     private Vector3 reticule;
     public Vector4 stageDimensions;
 
-    private float movementSpeedX = 6f;
-    private float movementSpeedY = 6f;
     public float animatorSpeedX;
     public float animatorSpeedY;
 
@@ -42,26 +49,37 @@ public class PlayerController : MonoBehaviour
 
 
     void Awake()
-    {
-        //DontDestroyOnLoad(this.gameObject);
+    {        
         camObj = GameObject.FindWithTag("MainCamera"); 
         stageDimensions = GameObject.FindWithTag("BG").GetComponent<BackgroundMovement>().stageDimensions;
         BGMAudioSource = GetComponent<AudioSource>();
+       
     }
 
     private void Start()
     {
+        target = transform.position;
         SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
     }
 
     void Update()
     {
-        Movements();
-        TelekineticSlash();
-        PsionicBolt();
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            TelekineticSlash();
+            TelekineticErasure();
+            PsionicBolt();
+            Movements();
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            LithaMovements();
+        }
         SetBGM();
-        TelekineticErasure();
+ 
     }
+
+
 
     private void Movements()
     {
@@ -166,6 +184,24 @@ public class PlayerController : MonoBehaviour
             transform.position = transform.position;
         }
 
+    }
+
+
+    private void LithaMovements() 
+    {
+        if (Input.GetMouseButton(0))
+        {
+            target = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
+            Vector3 direction = (target - transform.position);
+            Debug.DrawRay(transform.position, direction, Color.blue);
+
+            float angle = MathF.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+            Debug.Log("Angle" + angle);
+            //angle relative to z axis
+            Quaternion angleAxis = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, angleAxis, Time.deltaTime * 100);
+        }
+        transform.position = Vector3.MoveTowards(transform.position, target, mapMoveSpeed * Time.deltaTime);
     }
 
     private void PsiBatteryFire()
@@ -329,7 +365,23 @@ public class PlayerController : MonoBehaviour
 
     private void SceneManager_activeSceneChanged(Scene arg0, Scene arg1)
     {
+        Transform Tida = transform.Find("Tida3.1");
+        Transform Litha = transform.Find("LithaAvatar");
+
+        if (SceneManager.GetActiveScene().buildIndex != 1)
+        {
+            Litha.gameObject.SetActive(false);
+            Tida.gameObject.SetActive(true);
+            Debug.Log("You are in Scene");
+        }
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Litha.gameObject.SetActive(true);
+            Tida.gameObject.SetActive(false);
+            Debug.Log("You are in Map");
+        }
         transform.position = new Vector3(0, 0, 0);
+        transform.rotation = Quaternion.identity;
         stageDimensions = GameObject.FindWithTag("BG").GetComponent<BackgroundMovement>().stageDimensions;
     }
 

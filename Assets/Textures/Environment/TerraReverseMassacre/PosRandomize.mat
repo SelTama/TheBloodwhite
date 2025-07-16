@@ -42,10 +42,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _PosX: 0.01
-    - _PosY: 0.01
+    - _PosX: 0.015
+    - _PosY: 0.022
     m_Colors:
-    - _MovementMultiplier: {r: 0.2, g: 0.22, b: 0, a: 0}
+    - _MovementMultiplier: {r: 0.05, g: 0.07, b: 0, a: 0}
     - _PosX: {r: 0, g: 0, b: 0, a: 0}
     - _PosY: {r: 0.01, g: 0.03, b: 0, a: 0}
   m_BuildTextureStacks: []

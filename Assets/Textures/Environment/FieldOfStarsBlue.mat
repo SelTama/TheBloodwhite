@@ -48,7 +48,7 @@ Material:
     m_Floats:
     - _Scale: 1481
     m_Colors:
-    - _GlowColour: {r: 3.2904859, g: 3.3692338, b: 14.236386, a: 0}
+    - _GlowColour: {r: 6.577745, g: 6.6272583, b: 13.806751, a: 0}
     - _Speed: {r: 0.004, g: 0.004, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlanetScript : MonoBehaviour
 {
-    public int sceneIndex;
+    public string sceneName;
     public GameObject playerObj;
     public GameObject Button;
     public bool PlayerCollision = false;
@@ -27,7 +27,7 @@ public class PlanetScript : MonoBehaviour
             Button.SetActive(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
-                SceneManager.LoadScene(sceneIndex);
+                SceneManager.LoadScene(sceneName);
             }
         }
         else

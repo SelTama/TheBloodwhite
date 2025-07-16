@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class TidaStateScript : MonoBehaviour
 {
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     public event EventHandler OnTidaEnraged;
 

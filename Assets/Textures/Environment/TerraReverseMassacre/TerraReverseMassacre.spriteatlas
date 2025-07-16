@@ -40,12 +40,12 @@ SpriteAtlas:
       blockOffset: 1
       allowAlphaSplitting: 0
       enableRotation: 0
-      enableTightPacking: 1
+      enableTightPacking: 0
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 2800000, guid: 4f1cb2963205f6d4ebbdfb6d14a0e597, type: 3}
+    - {fileID: 2800000, guid: 62eb5439525e2d54f8663032cc83fe81, type: 3}
     - {fileID: 2800000, guid: 18031e231ce5e1141a720bf0cb1ff5cf, type: 3}
     - {fileID: 2800000, guid: 235357df42c788645bc15947c8ea78e7, type: 3}
     - {fileID: 2800000, guid: d28471630927ff341afb850f8100729c, type: 3}
@@ -53,44 +53,81 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 4d64858220ee1c44f95c993c0623c628, type: 3}
     - {fileID: 2800000, guid: a67273ed2147ea849aaaf1c3ba3f59fa, type: 3}
     - {fileID: 2800000, guid: 80575431ac53cce44a4eaf528c79787f, type: 3}
+    - {fileID: 2800000, guid: d28471630927ff341afb850f8100729c, type: 3}
+    - {fileID: 2800000, guid: dd84a686ff27b6b469f5eb4b26aebbd2, type: 3}
     - {fileID: 2800000, guid: 31a5d70a4d6860441a67be0b851056dd, type: 3}
-    - {fileID: 2800000, guid: 62eb5439525e2d54f8663032cc83fe81, type: 3}
+    - {fileID: 2800000, guid: a2d71137be835e6459d7aedbd4ba4cfc, type: 3}
+    - {fileID: 2800000, guid: d34d0859b2ca2c449a7b6a26aec1b82a, type: 3}
+    - {fileID: 2800000, guid: 59370e123ad8aab40be49c3ec3b2f573, type: 3}
+    - {fileID: 2800000, guid: 1073344cc1a00bc479600dbf0f8b16d8, type: 3}
+    - {fileID: 2800000, guid: 29dbbe476ec92dd47a64193c6040dca2, type: 3}
+    - {fileID: 2800000, guid: cc80f27f234ad2643a9087949136b927, type: 3}
+    - {fileID: 2800000, guid: 2291f9e84c1a3554c91f1ba4a6841b8b, type: 3}
+    - {fileID: 21300000, guid: cc7daf5e5979433499f64650958b6c2b, type: 3}
+    - {fileID: 2800000, guid: 76a3a44962fda2149ba2be8cac490abf, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
     - 80575431ac53cce44a4eaf528c79787f: 21300000
+    - 59370e123ad8aab40be49c3ec3b2f573: 21300000
     - 4d64858220ee1c44f95c993c0623c628: 21300000
     - 18031e231ce5e1141a720bf0cb1ff5cf: 21300000
     - d28471630927ff341afb850f8100729c: 21300000
-    - 4f1cb2963205f6d4ebbdfb6d14a0e597: 21300000
+    - dd84a686ff27b6b469f5eb4b26aebbd2: 21300000
+    - a2d71137be835e6459d7aedbd4ba4cfc: 21300000
+    - 29dbbe476ec92dd47a64193c6040dca2: 21300000
+    - 2291f9e84c1a3554c91f1ba4a6841b8b: 21300000
     - 62eb5439525e2d54f8663032cc83fe81: 21300000
+    - 76a3a44962fda2149ba2be8cac490abf: 21300000
+    - d34d0859b2ca2c449a7b6a26aec1b82a: 21300000
     - 31a5d70a4d6860441a67be0b851056dd: 21300000
     - 63a0b87be4916064c80f17ae78f1741a: 21300000
+    - 1073344cc1a00bc479600dbf0f8b16d8: 21300000
     - a67273ed2147ea849aaaf1c3ba3f59fa: 21300000
+    - cc7daf5e5979433499f64650958b6c2b: 21300000
+    - cc80f27f234ad2643a9087949136b927: 21300000
     - 235357df42c788645bc15947c8ea78e7: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 80575431ac53cce44a4eaf528c79787f, type: 3}
+  - {fileID: 21300000, guid: 59370e123ad8aab40be49c3ec3b2f573, type: 3}
   - {fileID: 21300000, guid: 4d64858220ee1c44f95c993c0623c628, type: 3}
   - {fileID: 21300000, guid: 18031e231ce5e1141a720bf0cb1ff5cf, type: 3}
   - {fileID: 21300000, guid: d28471630927ff341afb850f8100729c, type: 3}
-  - {fileID: 21300000, guid: 4f1cb2963205f6d4ebbdfb6d14a0e597, type: 3}
+  - {fileID: 21300000, guid: dd84a686ff27b6b469f5eb4b26aebbd2, type: 3}
+  - {fileID: 21300000, guid: a2d71137be835e6459d7aedbd4ba4cfc, type: 3}
+  - {fileID: 21300000, guid: 29dbbe476ec92dd47a64193c6040dca2, type: 3}
+  - {fileID: 21300000, guid: 2291f9e84c1a3554c91f1ba4a6841b8b, type: 3}
   - {fileID: 21300000, guid: 62eb5439525e2d54f8663032cc83fe81, type: 3}
+  - {fileID: 21300000, guid: 76a3a44962fda2149ba2be8cac490abf, type: 3}
+  - {fileID: 21300000, guid: d34d0859b2ca2c449a7b6a26aec1b82a, type: 3}
   - {fileID: 21300000, guid: 31a5d70a4d6860441a67be0b851056dd, type: 3}
   - {fileID: 21300000, guid: 63a0b87be4916064c80f17ae78f1741a, type: 3}
+  - {fileID: 21300000, guid: 1073344cc1a00bc479600dbf0f8b16d8, type: 3}
   - {fileID: 21300000, guid: a67273ed2147ea849aaaf1c3ba3f59fa, type: 3}
+  - {fileID: 21300000, guid: cc7daf5e5979433499f64650958b6c2b, type: 3}
+  - {fileID: 21300000, guid: cc80f27f234ad2643a9087949136b927, type: 3}
   - {fileID: 21300000, guid: 235357df42c788645bc15947c8ea78e7, type: 3}
   m_PackedSpriteNamesToIndex:
   - Tendril1b
+  - CubeX4
   - BloodMist
   - Terra
   - Tendril3
-  - SolClusterBG
+  - CubeX1
+  - CubeX2
+  - CubeX6
+  - MegaRaptorCarcass
   - Tendril2b
+  - RaptorDrake
+  - CubeX3
   - Tendril2a
   - BloodSpire
+  - CubeX5
   - Tendril1a
+  - OrcaRaptor
+  - CubeX7
   - DarkAurora
   m_RenderDataMap: {}
   m_Tag: TerraReverseMassacre
