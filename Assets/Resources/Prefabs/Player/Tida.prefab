@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2944520176331356366}
   - component: {fileID: 1143104911355932509}
   - component: {fileID: 435019683705351455}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tida
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -55,8 +55,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TEIsGo: 1
-  Tida: {fileID: 0}
-  LithaAvatar: {fileID: 0}
+  Tida: {fileID: 1378300104177837019}
+  LithaAvatar: {fileID: 2399113489050074820}
   angle: 0
   mapMoveSpeed: 20
   target: {x: 0, y: 0, z: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tida: {fileID: 1378300104177837019}
-  LithaAvatar: {fileID: 0}
+  LithaAvatar: {fileID: 2399113489050074820}
 --- !u!50 &1646021077999672048
 Rigidbody2D:
   serializedVersion: 5
@@ -189,7 +189,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -618,6 +618,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LithaAvatar
       objectReference: {fileID: 0}
+    - target: {fileID: 8939399162653192407, guid: 0fe79caaed7ebb4419cfe9f3693aa169,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8939399162653192407, guid: 0fe79caaed7ebb4419cfe9f3693aa169,
+        type: 3}
+      propertyPath: m_TagString
+      value: LithaOverworld
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3070100431270143186, guid: 0fe79caaed7ebb4419cfe9f3693aa169, type: 3}
     - {fileID: 4366235008236592963, guid: 0fe79caaed7ebb4419cfe9f3693aa169, type: 3}
@@ -627,6 +637,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fe79caaed7ebb4419cfe9f3693aa169, type: 3}
+--- !u!1 &2399113489050074820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8939399162653192407, guid: 0fe79caaed7ebb4419cfe9f3693aa169,
+    type: 3}
+  m_PrefabInstance: {fileID: 6720634177008651795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7048118107362014655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4362738161793432492, guid: 0fe79caaed7ebb4419cfe9f3693aa169,

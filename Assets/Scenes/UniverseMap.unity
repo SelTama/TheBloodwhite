@@ -818,12 +818,6 @@ MeshRenderer:
   m_SortingLayer: 14
   m_SortingOrder: 153
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &575840690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1378300104177837019, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-    type: 3}
-  m_PrefabInstance: {fileID: 601044704235538636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &824261393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,12 +2138,6 @@ MonoBehaviour:
   playerObj: {fileID: 0}
   Button: {fileID: 824261393}
   PlayerCollision: 0
---- !u!1 &1919539480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2399113489050074820, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-    type: 3}
-  m_PrefabInstance: {fileID: 601044704235538636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2094012063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,66 +2323,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1378300104177837019, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1490023286619822485, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
         type: 3}
       propertyPath: m_Name
       value: Tida
       objectReference: {fileID: 0}
-    - target: {fileID: 1490023286619822485, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
+    - target: {fileID: 3525994637397145952, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
         type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1646021077999672048, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399113489050074820, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399113489050074820, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2399113489050074820, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: m_TagString
-      value: LithaOverworld
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874906623154129231, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: Tida
+      propertyPath: combatModeMusic
       value: 
-      objectReference: {fileID: 575840690}
-    - target: {fileID: 2874906623154129231, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2874906623154129231, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: LithaAvatar
-      value: 
-      objectReference: {fileID: 1919539480}
-    - target: {fileID: 3515516913010595749, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 4224
-      objectReference: {fileID: 0}
-    - target: {fileID: 4902797514910759718, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
-        type: 3}
-      propertyPath: LithaAvatar
-      value: 
-      objectReference: {fileID: 1919539480}
+      objectReference: {fileID: 8300000, guid: a1385df29fcc1cc4c9e64bd003857b44, type: 3}
     - target: {fileID: 7411412433894636601, guid: f0f4e0dcbb7b5ad479b5ea5428414562,
         type: 3}
       propertyPath: m_LocalPosition.x
