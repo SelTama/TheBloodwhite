@@ -31099,6 +31099,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4907654045039880452, guid: 26979cdfece59424abb08f256a84711f,
         type: 3}
+      propertyPath: NoiseModule.frequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907654045039880452, guid: 26979cdfece59424abb08f256a84711f,
+        type: 3}
       propertyPath: ShapeModule.randomPositionAmount
       value: 0
       objectReference: {fileID: 0}

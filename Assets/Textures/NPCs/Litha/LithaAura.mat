@@ -46,7 +46,7 @@ Material:
     - _EffectScale: 20
     - _Float: 0
     m_Colors:
-    - _Color: {r: 3.1367676, g: 2.8547537, b: 5.9921565, a: 0}
+    - _Color: {r: 1.5683838, g: 1.4273769, b: 2.9960783, a: 0}
     - _Pos: {r: 0.5, g: 0, b: 0, a: 0}
     - _Speed: {r: 0, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []
