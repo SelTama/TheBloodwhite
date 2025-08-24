@@ -43,6 +43,6 @@ Material:
     - _EffectSpeed: 0
     - _TimePassed: 0
     m_Colors:
-    - _FocalPoint: {r: 0.60402745, g: 0.6327908, b: 70, a: 0}
+    - _FocalPoint: {r: 0.34660167, g: 0.7852061, b: 70, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
