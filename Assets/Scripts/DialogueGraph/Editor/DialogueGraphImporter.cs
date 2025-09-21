@@ -56,9 +56,9 @@ public class DialogueGraphImporter : ScriptedImporter
     private void ProcessDialogueNode(DialogueNode node, RuntimeDialogueNode runtimeNode, Dictionary<INode, string> nodeIDMap) 
     {
         runtimeNode.SpeakerName = GetPortValue<string>(node.GetInputPortByName("Speaker"));
-        runtimeNode.SpeakerName = GetPortValue<string>(node.GetInputPortByName("Dialogue"));
+        runtimeNode.DialogueText = GetPortValue<string>(node.GetInputPortByName("Dialogue"));
 
-        var nextNodePort = node.GetOutputPortByName("Out")?.firstConnectedPort;
+        var nextNodePort = node.GetOutputPortByName("out")?.firstConnectedPort;
         if (nextNodePort != null)
         { 
             runtimeNode.NextNodeID = nodeIDMap[nextNodePort.GetNode()]; 
@@ -67,7 +67,7 @@ public class DialogueGraphImporter : ScriptedImporter
 
     private T GetPortValue<T>(IPort port)     
     {
-        if (port != null) return default;
+        if (port == null) return default;
 
         if (port.isConnected) 
         {
@@ -81,6 +81,7 @@ public class DialogueGraphImporter : ScriptedImporter
         port.TryGetValue(out T fallbackValue);
         return fallbackValue;
     }
+
 
 
 }
