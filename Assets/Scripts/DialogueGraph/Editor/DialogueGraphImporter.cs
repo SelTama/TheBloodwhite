@@ -44,15 +44,21 @@ public class DialogueGraphImporter : ScriptedImporter
             {
                 ProcessDialogueNode(dialogueNode, runtimeNode, nodeIDMap);                            
             }
+            else if (iNode is ChoiceNode choiceNode)
+            {
+                ProcessChoiceNode(choiceNode, runtimeNode, nodeIDMap);
+            }
 
             runtimeGraph.AllNodes.Add(runtimeNode);
 
         }
         ctx.AddObjectToAsset("RuntimeData", runtimeGraph);
         ctx.SetMainObject(runtimeGraph);
-
-
     }
+
+
+
+
     private void ProcessDialogueNode(DialogueNode node, RuntimeDialogueNode runtimeNode, Dictionary<INode, string> nodeIDMap) 
     {
         runtimeNode.SpeakerName = GetPortValue<string>(node.GetInputPortByName("Speaker"));
@@ -60,8 +66,31 @@ public class DialogueGraphImporter : ScriptedImporter
 
         var nextNodePort = node.GetOutputPortByName("out")?.firstConnectedPort;
         if (nextNodePort != null)
-        { 
-            runtimeNode.NextNodeID = nodeIDMap[nextNodePort.GetNode()]; 
+        {
+            runtimeNode.NextNodeID = nodeIDMap[nextNodePort.GetNode()];
+        }
+     
+    }
+
+
+    private void ProcessChoiceNode(ChoiceNode node, RuntimeDialogueNode runtimeNode, Dictionary<INode, string> nodeIDMap)
+    {
+        runtimeNode.SpeakerName = GetPortValue<string>(node.GetInputPortByName("Speaker"));
+        runtimeNode.DialogueText = GetPortValue<string>(node.GetInputPortByName("Dialogue"));
+
+        var choiceOutputPorts = node.GetOutputPorts().Where(p => p.name.StartsWith("Choice "));
+        foreach (var outputPort in choiceOutputPorts) 
+        {
+            var index = outputPort.name.Substring("Choice ".Length);
+            var textPort = node.GetInputPortByName($"Choice Text {index}");
+
+            var choiceData = new ChoiceData
+            {
+                ChoiceText = GetPortValue<string>(textPort),
+                DestinationNodeID = outputPort.firstConnectedPort != null ? nodeIDMap[outputPort.firstConnectedPort.GetNode()] : null,
+            };
+
+            runtimeNode.Choices.Add(choiceData);
         }
     }
 

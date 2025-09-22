@@ -36,4 +36,33 @@ public class DialogueNode : Node
     }
 }
 
+[Serializable]
+
+public class ChoiceNode : Node 
+{
+    const string optionID = "portCount";
+    protected override void OnDefinePorts(IPortDefinitionContext context)
+    {
+        context.AddInputPort("in").Build();
+
+        context.AddInputPort<string>("Speaker").Build();
+        context.AddInputPort<string>("Dialogue").Build();
+
+        var option = GetNodeOptionByName(optionID);
+        option.TryGetValue(out int portCount);
+        for (int i = 0; i < portCount; i++)
+        {
+            context.AddInputPort<string>($"Choice Text {i}").Build();
+            context.AddOutputPort($"Choice {i}").Build();
+        }
+    }
+    
+    protected override void OnDefineOptions(IOptionDefinitionContext context)
+    {
+        context.AddOption<int>(optionID)
+            .WithDisplayName("Port Count")
+            .WithDefaultValue(2)
+            .Delayed();
+    }  
+}
 
