@@ -41,10 +41,15 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
-        if (/*inDialogueRange &&*/ Keyboard.current.fKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame && _runtimeGraph != null && _currentNode == null)
         {
             StartDialogue(_runtimeGraph);
         }
+        if (_currentNode != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            EndDialogue();
+        }
+
 
         //if (Mouse.current.leftButton.wasPressedThisFrame && _currentNode != null && _currentNode.Choices.Count == 0) 
         //{
@@ -106,9 +111,31 @@ public class DialogueManager : MonoBehaviour
                             EndDialogue();
                         }
                     });
-                }             
+                }
             }
-        }        
+        }
+        if (_currentNode.Choices.Count == 0)
+        {
+            Button button = Instantiate(ChoiceButtonPrefab, ChoiceButtonContainer);
+
+            TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+
+            if (buttonText != null)
+            {
+                buttonText.text = "-- End Dialogue --";
+            }
+
+            if (button != null)
+            {
+                button.onClick.AddListener(() =>
+                {
+                    EndDialogue();
+                });
+
+
+            }
+        }
+
     }
 
     private void EndDialogue() 

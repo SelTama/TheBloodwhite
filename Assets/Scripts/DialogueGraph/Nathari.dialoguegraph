@@ -37,6 +37,7 @@ MonoBehaviour:
         - rid: 9173983589790384361
         - rid: 9173983589790384374
         - rid: 9173983592049016913
+        - rid: 9173983636388577379
         m_GraphWireModels:
         - rid: 9173983589790384352
         - rid: 9173983589790384357
@@ -49,6 +50,7 @@ MonoBehaviour:
         - rid: 9173983623294222420
         - rid: 9173983623294222421
         - rid: 9173983623294222422
+        - rid: 9173983636388577380
         m_GraphStickyNoteModels: []
         m_GraphPlacematModels: []
         m_GraphVariableModels:
@@ -62,7 +64,7 @@ MonoBehaviour:
           serializedVersion: 2
           x: 842
           y: -31.333334
-          width: 1866
+          width: 1937.3333
           height: 512.6667
         m_GraphElementMetaData:
         - m_Guid:
@@ -225,6 +227,22 @@ MonoBehaviour:
             Hash: 1359ceafc5286c09c27a9c03ad50acb8
           m_Category: 2
           m_Index: 10
+        - m_Guid:
+            m_Value0: 14482699956902728543
+            m_Value1: 1336575789630642685
+          m_HashGuid:
+            serializedVersion: 2
+            Hash: 5f93c0cfe0e2fcc8fd59526499788c12
+          m_Category: 0
+          m_Index: 7
+        - m_Guid:
+            m_Value0: 12580986031026619515
+            m_Value1: 13546771087971528224
+          m_HashGuid:
+            serializedVersion: 2
+            Hash: 7b447e6723a498ae202e13d887ccffbb
+          m_Category: 2
+          m_Index: 11
         m_EntryPoint:
           rid: 9173983589790384333
         m_Graph:
@@ -668,15 +686,19 @@ MonoBehaviour:
           serializedVersion: 2
           Hash: c374de32c368f7beb6c0d1ff73d8ee49
         m_Version: 2
-        m_Position: {x: 2593.3333, y: 88.51828}
+        m_Position: {x: 2594.1, y: 88.51828}
         m_Title: 
         m_Tooltip: 
         m_NodePreviewModel:
           rid: -2
         m_State: 0
         m_InputConstantsById:
-          m_KeyList: []
-          m_ValueList: []
+          m_KeyList:
+          - Speaker
+          - Dialogue
+          m_ValueList:
+          - rid: 9173983636388577377
+          - rid: 9173983636388577378
         m_InputPortInfos:
           expandedPortsById:
             m_KeyList: []
@@ -1013,6 +1035,86 @@ MonoBehaviour:
           m_NodeModelHashGuid:
             serializedVersion: 2
             Hash: 0627e4fe5bd4817bd7bc277fb136edba
+          m_UniqueId: Speaker
+          m_PortDirection: 1
+          m_PortOrientation: 0
+          m_Title: Speaker
+    - rid: 9173983636388577377
+      type: {class: 'Constant`1[[System.String, mscorlib]]', ns: Unity.GraphToolkit.Editor,
+        asm: Unity.GraphToolkit.Internal.Editor}
+      data:
+        m_Value: 
+    - rid: 9173983636388577378
+      type: {class: 'Constant`1[[System.String, mscorlib]]', ns: Unity.GraphToolkit.Editor,
+        asm: Unity.GraphToolkit.Internal.Editor}
+      data:
+        m_Value: End Dialogue
+    - rid: 9173983636388577379
+      type: {class: VariableNodeModelImp, ns: Unity.GraphToolkit.Editor.Implementation,
+        asm: Unity.GraphToolkit.Editor}
+      data:
+        m_Guid:
+          m_Value0: 14482699956902728543
+          m_Value1: 1336575789630642685
+        m_HashGuid:
+          serializedVersion: 2
+          Hash: 5f93c0cfe0e2fcc8fd59526499788c12
+        m_Version: 2
+        m_Position: {x: 2432.4639, y: -20.869568}
+        m_Title: Tida
+        m_Tooltip: 
+        m_NodePreviewModel:
+          rid: -2
+        m_State: 0
+        m_InputConstantsById:
+          m_KeyList: []
+          m_ValueList: []
+        m_InputPortInfos:
+          expandedPortsById:
+            m_KeyList: []
+            m_ValueList: 
+        m_OutputPortInfos:
+          expandedPortsById:
+            m_KeyList: []
+            m_ValueList: 
+        m_Collapsed: 0
+        m_CurrentModeIndex: 0
+        m_ElementColor:
+          m_Color: {r: 0, g: 0, b: 0, a: 0}
+          m_HasUserColor: 0
+        m_DeclarationModel:
+          rid: 9173983589790384331
+        m_DeclarationModelHashGuid:
+          serializedVersion: 2
+          Hash: f707180718b294949e64bad0a3f1ffc5
+    - rid: 9173983636388577380
+      type: {class: WireModel, ns: Unity.GraphToolkit.Editor, asm: Unity.GraphToolkit.Internal.Editor}
+      data:
+        m_Guid:
+          m_Value0: 12580986031026619515
+          m_Value1: 13546771087971528224
+        m_HashGuid:
+          serializedVersion: 2
+          Hash: 7b447e6723a498ae202e13d887ccffbb
+        m_Version: 2
+        m_FromPortReference:
+          m_NodeModelGuid:
+            m_Value0: 14482699956902728543
+            m_Value1: 1336575789630642685
+          m_NodeModelHashGuid:
+            serializedVersion: 2
+            Hash: 5f93c0cfe0e2fcc8fd59526499788c12
+          m_UniqueId: MainPortName
+          m_PortDirection: 2
+          m_PortOrientation: 0
+          m_Title: MainPortName
+        m_ToPortReference:
+          m_NodeModelGuid:
+            m_Value0: 13760582374035190979
+            m_Value1: 5327433401950650550
+          m_NodeModelHashGuid:
+            serializedVersion: 2
+            Hash: c374de32c368f7beb6c0d1ff73d8ee49
           m_UniqueId: Speaker
           m_PortDirection: 1
           m_PortOrientation: 0

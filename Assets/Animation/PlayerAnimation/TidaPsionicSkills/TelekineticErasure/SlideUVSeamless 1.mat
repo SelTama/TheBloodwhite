@@ -72,7 +72,7 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _GlossinessSource: 0
-    - _GradationL: 0.22
+    - _GradationL: 0.02
     - _GradationR: 0.43
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -86,6 +86,7 @@ Material:
     - _Surface: 0
     - _ZWrite: 1
     m_Colors:
+    - White: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.12599076, g: 0, b: 2.861804, a: 1}
     - _EmissionColor: {r: 1.8319855, g: 0, b: 32, a: 1}

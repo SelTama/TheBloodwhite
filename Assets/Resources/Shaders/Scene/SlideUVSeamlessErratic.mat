@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pulse
-  m_Shader: {fileID: -6465566751694194690, guid: d344d6dbe5471314a912b73715a8c027,
+  m_Name: SlideUVSeamlessErratic
+  m_Shader: {fileID: -6465566751694194690, guid: 3e63594cc82e78c49a1ebda9ab458b28,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -20,12 +20,16 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: _Speed
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 41c6fdc243bc9944bbd961fdcdde8584, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8d50754f02f45a143b52f23f7af28b49, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -42,20 +46,22 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Expansion: 1
-    - _Frequency: 17.7
-    - _Size: 0.05
-    - _Speed: 6.72
-    - _Strength: 2
+    - _GradationL: 0.17
+    - _GradationR: 0
+    - _Scale: 40.73
+    - _Spd: -2.2
+    - _Str: 0.679
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _Centre: {r: 0, g: 0.5, b: 0, a: 0}
-    - _Color: {r: 1.0439805, g: 0.85603374, b: 4.6138783, a: 1}
-    - _Smooth: {r: -1.98, g: 10.61, b: 0, a: 0}
-    - _Smooth2: {r: 5, g: -0.28, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.3058824}
+    - _Color2: {r: 1.1182561, g: 0.9653869, b: 2.0883884, a: 0}
+    - _EmissionColor: {r: 0.05445528, g: 0, b: 1, a: 0}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _SlideSpeed: {r: -1.11, g: 0, b: 0, a: 0}
+    - _Smooth: {r: 0, g: 0.03, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &7185725886832467406
+--- !u!114 &3336634916080476421
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,5 +72,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
   version: 10
