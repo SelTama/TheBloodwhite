@@ -226,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &119331556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -668,7 +668,7 @@ Canvas:
   m_GameObject: {fileID: 510169434}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 862360390}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -820,9 +820,9 @@ MonoBehaviour:
   playerObj: {fileID: 0}
   NPCCollision: 0
   CollisionNPC: 0
-  QuotesList:
-  - NPCQuote: {fileID: 1280585945}
-    FButton: {fileID: 102144598}
+  FButton: {fileID: 102144598}
+  dialogueGraphs:
+  - {fileID: 3965311268370046156, guid: 976774a6cb08fb84b9141a10593d8702, type: 3}
 --- !u!58 &533739750
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3107,8 +3107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f812c59a741c14449677eec119134be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  RuntimeGraph: {fileID: 3965311268370046156, guid: 976774a6cb08fb84b9141a10593d8702,
-    type: 3}
   DialoguePanel: {fileID: 119331555}
   SpeakerNameText: {fileID: 1027208878}
   DialogueText: {fileID: 1556495572}

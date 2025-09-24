@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class QuotesManager : MonoBehaviour
 {
@@ -8,32 +9,42 @@ public class QuotesManager : MonoBehaviour
     public GameObject playerObj;
     public bool NPCCollision = false;
     public int CollisionNPC;
+    public GameObject FButton;
+    private int _currentDialogueIndex = 0;
 
-    public List<QuoteModel> QuotesList = new List<QuoteModel>();
+
+    public List<RuntimeDialogueGraph> dialogueGraphs = new List<RuntimeDialogueGraph>();
 
 
     private void Awake()
     {
         playerObj = GameObject.FindWithTag("Player").gameObject;
-        QuotesList[CollisionNPC].FButton.SetActive(false);
+        FButton.SetActive(false);
     }
+
+
     
     void Update()
-    {           
-               
+    {
+
         if (NPCCollision)
         {
-            QuotesList[CollisionNPC].FButton.SetActive(true);
-
-            if (Input.GetKeyDown(KeyCode.F))
+            FButton.SetActive(true);
+            if (Keyboard.current.fKey.wasPressedThisFrame)
             {
-                QuotesList[CollisionNPC].NPCQuote.SetActive(true);
+                DialogueManager manager = FindObjectOfType<DialogueManager>();
+                if (manager != null && dialogueGraphs.Count > 0)
+                {
+                    manager.StartDialogue(dialogueGraphs[_currentDialogueIndex]);
+                }
+
+
 
             }
         }
         else
         {
-            QuotesList[CollisionNPC].FButton.SetActive(false);
+            FButton.SetActive(false);
         }
     }
 
@@ -60,13 +71,18 @@ public class QuotesManager : MonoBehaviour
             NPCCollision = false;
         }
     }
-    
+
+    public void SetDialogue(int index)
+    {
+        if (index >= 0 && index < dialogueGraphs.Count)
+            _currentDialogueIndex = index;
+    }
+
 
     [System.Serializable]
     public class QuoteModel
     {
-        public GameObject NPCQuote;
-        public GameObject FButton;
+        public RuntimeDialogueGraph RuntimeDialogue;        
     }
 
 

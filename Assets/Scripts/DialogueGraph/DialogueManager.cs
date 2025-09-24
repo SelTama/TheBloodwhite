@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public RuntimeDialogueGraph RuntimeGraph;
+    [Header("Runtime Data")]
+    private RuntimeDialogueGraph _runtimeGraph;
+    private Dictionary<string, RuntimeDialogueNode> _nodeLookup = new Dictionary<string, RuntimeDialogueNode>();
+    private RuntimeDialogueNode _currentNode;
 
     [Header("UI Components")]
     public GameObject DialoguePanel;
@@ -18,46 +21,43 @@ public class DialogueManager : MonoBehaviour
     public Transform ChoiceButtonContainer;
 
 
-
-    private Dictionary<string, RuntimeDialogueNode> _nodeLookup = new Dictionary<string, RuntimeDialogueNode>();
-    private RuntimeDialogueNode _currentNode;
-
-
-
-
-
-
-
     private void Start()
     {
-        foreach (var node in RuntimeGraph.AllNodes) 
-        {
-            _nodeLookup[node.NodeID] = node;
-        }
-        if (!string.IsNullOrEmpty(RuntimeGraph.EntryNodeID))
-        {
-            ShowNode(RuntimeGraph.EntryNodeID);
-        }
-        else 
-        {
-            EndDialogue(); 
-        }
+        DialoguePanel.SetActive(false);
+
+        //foreach (var node in RuntimeGraph.AllNodes) 
+        //{
+        //    _nodeLookup[node.NodeID] = node;
+        //}
+        ////if (!string.IsNullOrEmpty(RuntimeGraph.EntryNodeID))
+        //{
+        //    ShowNode(RuntimeGraph.EntryNodeID);
+        //}
+        //else 
+        //{
+        //    EndDialogue(); 
+        //}
 
     }
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame && _currentNode != null && _currentNode.Choices.Count == 0) 
+        if (/*inDialogueRange &&*/ Keyboard.current.fKey.wasPressedThisFrame)
         {
-            if (!string.IsNullOrEmpty(_currentNode.NextNodeID))
-            {
-                ShowNode(_currentNode.NextNodeID);
-            }
-            else
-            {
-                EndDialogue();
-            }
-
+            StartDialogue(_runtimeGraph);
         }
+
+        //if (Mouse.current.leftButton.wasPressedThisFrame && _currentNode != null && _currentNode.Choices.Count == 0) 
+        //{
+        //    if (!string.IsNullOrEmpty(_currentNode.NextNodeID))
+        //    {
+        //        ShowNode(_currentNode.NextNodeID);
+        //    }
+        //    else
+        //    {
+        //        EndDialogue();
+        //    }
+
+        //}
 
     }
 
@@ -106,7 +106,7 @@ public class DialogueManager : MonoBehaviour
                             EndDialogue();
                         }
                     });
-                }
+                }             
             }
         }        
     }
@@ -122,4 +122,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void StartDialogue(RuntimeDialogueGraph graph) 
+    {
+        _runtimeGraph = graph;
+        _nodeLookup.Clear();
+
+        foreach (var node in _runtimeGraph.AllNodes)
+        {
+            _nodeLookup[node.NodeID] = node;
+        }
+
+        if (!string.IsNullOrEmpty(_runtimeGraph.EntryNodeID))
+        {
+            ShowNode(_runtimeGraph.EntryNodeID);
+        }
+
+        else
+        {
+            EndDialogue();
+        }
+    }   
 }
