@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PowerWaves
-  m_Shader: {fileID: -6465566751694194690, guid: c65c223ed5441cb42b96ac2c169a72f2,
+  m_Name: Shader Graphs_Grayscale 1
+  m_Shader: {fileID: -6465566751694194690, guid: e03d9734e70c54344b69d738ac8f9fcb,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,27 +42,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Angle: 1.54
-    - _EffectScale: 6.72
-    - _Float: 0
-    - _Step: -0.22
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UIMaskSoftnessX: 1
+    - _UIMaskSoftnessY: 1
     m_Colors:
-    - White: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.60926086, g: 0.57943004, b: 2.9960778, a: 0}
-    - _Pos: {r: -0.09, g: -0.1, b: 0, a: 0}
-    - _Speed: {r: 0, g: 0.5, b: 0, a: 0}
+    - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _Vector3: {r: 0.299, g: 0.587, b: 0.114, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &4856127068222478888
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 10
