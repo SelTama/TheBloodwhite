@@ -43,10 +43,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _MaskStrength: 1.15
-    - _WaveScale: 0.02
-    - _WaveStrength: 4
+    - _WaveScale: 0.04
+    - _WaveStrength: 3
     m_Colors:
-    - _Speed: {r: 15, g: 15, b: 0, a: 0}
+    - White: {r: 1, g: 1, b: 1, a: 1}
+    - _Speed: {r: 9, g: 9, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7993794543014510497

@@ -46,6 +46,7 @@ Material:
     - _EffectScale: 20
     - _Float: 0
     m_Colors:
+    - White: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1.5683838, g: 1.4273769, b: 2.9960783, a: 0}
     - _Pos: {r: 0.5, g: 0, b: 0, a: 0}
     - _Speed: {r: 0, g: 0.01, b: 0, a: 0}
