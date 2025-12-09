@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Invert
+  m_Name: Invert
   m_Shader: {fileID: -6465566751694194690, guid: 596e6ec34b5e4ed47903e1208ddcca3b,
     type: 3}
   m_Parent: {fileID: 0}

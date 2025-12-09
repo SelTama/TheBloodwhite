@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MotionBlur
-  m_Shader: {fileID: -6465566751694194690, guid: df06c6ffc4c4f774dba604ea0362a570,
+  m_Name: MotionBlurAngleDoubtpurge2
+  m_Shader: {fileID: -6465566751694194690, guid: 87de418d918c21c4f8264b5912c3ccb7,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2348659cf5aeb964aab691f1bfa053f8, type: 3}
+        m_Texture: {fileID: 2800000, guid: 76cc882ba7559174b8707d045351fb84, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -42,22 +42,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Angle: 145.1
     - _BlurStrength: 0
-    - _ColorMask: 15
-    - _SpriteNum: 5
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UIMaskSoftnessX: 1
-    - _UIMaskSoftnessY: 1
+    - _Divide: 9
+    - _Float: 1
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &1946165894126475131
+--- !u!114 &7211028814122657632
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
