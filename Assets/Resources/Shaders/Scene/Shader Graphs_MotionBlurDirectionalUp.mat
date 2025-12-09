@@ -42,7 +42,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Angle: 2.16
+    - _Angle: 145
     - _BlurStrength: 0
     - _Divide: 9
     m_Colors:
